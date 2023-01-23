@@ -1,0 +1,32 @@
+PARA SUMIR COM A COLUNA DA ESQUERDA
+
+.left_col {
+	width: 0px
+}	
+
+.sidebar-footer {
+    width: 0px;
+    display: none;
+}
+
+.nav_title {
+    width: 0;
+}
+
+.profile {
+    width: 0;
+    display: none;
+}
+
+---------------------------------------------
+
+PARA ENCOSTAR A COLUNA DA DIREITA NA ESQUERDA
+
+.main_container .top_nav {
+    /* margin-left: 230px; */
+}
+
+.nav-md .container.body .right_col {
+    margin-left: 0;
+    width: 100%;
+}

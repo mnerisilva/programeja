@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="dashboard_admin.css" />
+  </head>
+  <body>
+    <div class="container container-fluid">
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-center mt-2">
+          <h1>Dashboard Admin</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7 col-sm-12 col-xs-12">
+          <table class="table lista-user">
+            <thead>
+              <tr>
+                <th></th>
+                <th>#</th>
+                <th>Usuário</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Modal/Painel gerendiamento de recursos para o usuário (trilhas, vídeos)-->
+    <div class="modal fade" id="modalGerenciarAtribuidos" tabindex="-1" aria-labelledby="modalGerenciarAtribuidosLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modalGerenciarAtribuidosLabel"><span class="modal-user-photo"></span><span class="modal-user-name"></span></h5>
+            <!--<h5 class="modal-title" id="exampleModalLabel"></h5>-->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row g-3 mt-1">
+                <div class="col-md-4">
+                  <div class="tile-stats">
+                    <div class="col-md-12">
+                      <form class="filtra-trilha">
+                        <label for="trilha_escolhida" class="form-label">Escolha a Trilha</label>
+                        <select class="form-select" id="trilha_escolhida" required="" name="trilha_escolhida">                            
+                        </select>
+                        <button type="submit" class="btn btn-primary btn-carrega-trilha mb-4">Carrega vídeos da trilha</button>
+                      </form>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="tile-stats">
+                    <div class="icon"><i class="fa fa-comments-o"></i>
+                    </div>
+                    <div class="count">179</div>
+                    <h3>New Sign ups</h3>
+                    <p>Lorem ipsum psdea itgum rixt.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="tile-stats">
+                    <div class="icon"><i class="fa fa-comments-o"></i>
+                    </div>
+                    <div class="count">179</div>
+                    <h3>New Sign ups</h3>
+                    <p>Lorem ipsum psdea itgum rixt.</p>
+                    </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-6">
+                    <table class="table table-responsive-sm table-responsive-md lista-videos-geral">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Vídeo</th>
+                          <th>Código</th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>                  
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-responsive-sm table-responsive-md lista-videos-da-trilha">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Vídeo</th>
+                          <th>Código</th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+        </div>
+        </div>
+    </div>
+    </div>  
+
+    
+
+  
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   
+    <script src="script_dashboard.js"></script>
+  </body>
+</html>
+
+
