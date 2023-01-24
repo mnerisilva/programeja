@@ -57,6 +57,9 @@ mysqli_close($conn);
     <link href="../build/css/custom_.css" rel="stylesheet">
     <!--<link href="custom.css" rel="stylesheet">-->
     <link href="custom_plataforma.css" rel="stylesheet">
+
+    <!-- TinyMCE -->    
+    <script src="tinymce/tinymce.min.js"></script>
   </head>
 
   <body class="nav-md">
@@ -565,7 +568,7 @@ mysqli_close($conn);
                                       <input type="hidden" class="form-control" id="operation" required="" name="operation" value="save">
                                       <input type="hidden" class="form-control" id="post_id_edit" required="" name="post_id_edit" value="">
                                     </div>
-                                    <textarea name="editor1"></textarea>
+                                    <textarea id="editor1" name="editor1"></textarea>
                                     <button type="submit" class="btn btn-secondary salva-texto-do-editor mt-2">Salvar</button>
                                     <button type="button" class="btn btn-light form-salva-post-cancel mt-2">Cancelar</button>
                                   </form>
@@ -876,11 +879,12 @@ mysqli_close($conn);
 
       <script>   
         $(document).ready(function(){
-            CKEDITOR.replace('editor1', {
+
+            /*CKEDITOR.replace('editor1', {
                   extraPlugins: 'editorplaceholder',
                   editorplaceholder: 'Start typing here...',
                   removeButtons: 'PasteFromWord'
-            });
+            });*/
 
             CKEDITOR.replace('editor2', {
                   extraPlugins: 'editorplaceholder',
@@ -894,8 +898,11 @@ mysqli_close($conn);
                   removeButtons: 'PasteFromWord'
             });                
           // resolve conflito CKeditor4 e modal Bootstrap 4
-          $.fn.modal.Constructor.prototype._enforceFocus = function(){};
-        });      
+          $.fn.modal.Constructor.prototype._enforceFocus = function(){};             
+        });
+
+             
+        
   </script>
 
   </body>

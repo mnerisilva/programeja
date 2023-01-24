@@ -1,8 +1,31 @@
     //CKEDITOR.replace( 'editor1' );      
     //CKEDITOR.replace( 'editor2' );      
-    //CKEDITOR.replace( 'editor3' );      
-
-
+    //CKEDITOR.replace( 'editor3' );     
+    
+    
+     // TinyMCE
+     tinymce.init({
+        selector: '#editor1',
+        menubar:false,
+        language: 'pt_BR',
+        placeholder: 'Faça suas anotações aqui',
+        height: 500,
+        plugins: [
+            'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+            'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+            'insertdatetime', 'media', 'table', 'help', 'wordcount', 'codesample', 'fullscreen'
+        ],
+        toolbar_mode: 'sliding',
+        toolbar1:'undo redo | blocks | ' +
+        'bold italic backcolor | alignleft aligncenter ' +
+        'alignright alignjustify | bullist numlist outdent indent | ' +
+        'removeformat |' + ' codesample | fullscreen |  | link image | help',/*
+        toolbar2: 'undo redo | blocks | ' +
+        'bold italic backcolor | alignleft aligncenter ' +
+        'alignright alignjustify | bullist numlist outdent indent | ' +
+        'removeformat |' + ' codesample | fullscreen |  | link image | help',*/
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+    });
 
 
     const _leftCol = document.querySelector('.left_col');
@@ -356,14 +379,17 @@
     $(_formSalvaPost).submit(function(event){
         event.preventDefault();           
         Prism.highlightAll();
-        let _conteudoTextareaEditor = CKEDITOR.instances.editor1.getData();
+        //let _conteudoTextareaEditor = CKEDITOR.instances.editor1.getData();
+        console.log('MMMMMMM '+tinymce.activeEditor);
+        let _conteudoTextareaEditor = tinymce.get("editor1").getContent();
         let _postTitle = document.querySelector('#post_title').value; 
         let _operation = _formSalvaPost.querySelector('#operation');    // captura a natureza da operação: 'save': INCLUI novo post, ou, 'update': ATUALIZA de post existente
         _operation = _operation.value; 
         let _post_id_edit = _formSalvaPost.querySelector('#post_id_edit');    // captura a natureza da operação: 'save': INCLUI novo post, ou, 'update': ATUALIZA de post existente
         _post_id_edit = _post_id_edit.value;                                  // captura a natureza da operação: 'save': INCLUI novo post, ou, 'update': ATUALIZA de post existente                                  // captura a natureza da operação: 'save': INCLUI novo post, ou, 'update': ATUALIZA de post existente
         Prism.highlightAll();
-        CKEDITOR.instances.editor1.setData('');
+        //CKEDITOR.instances.editor1.setData('');
+        tinymce.get("editor1").setContent("");
         document.querySelector('#post_title').value = '';
         let formData = {
             id_conteudo: _idConteudoEscolhidoUserLogado,
