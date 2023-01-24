@@ -1156,3 +1156,16 @@ right_col*/
     margin-top: -100px;
     opacity: 0;
 }
+
+.post-content p {
+    font-size: initial;
+}
+
+.post-content pre {
+    font-size: initial;
+    background-color: #f7f7f7;;
+}
+
+code[class*=language-], pre[class*=language-] {
+    color: #767171;
+}
