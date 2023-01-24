@@ -1150,6 +1150,10 @@ right_col*/
     transition: background-color .3s;
 }
 
+.lista-de-posts {
+    padding-left: .6em;
+}
+
 
 #carrega_conteudo_button_submit {
     position: absolute;
