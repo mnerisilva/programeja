@@ -7,7 +7,7 @@ include('connect.php');
 mysqli_set_charset($conn, "utf8");
 
 
-if(count($_POST) > 0){
+//if(count($_POST) > 0){
 
 
 
@@ -18,6 +18,7 @@ if(count($_POST) > 0){
         $user_id			= intval($_POST['user_id']);
         $post_title			= addslashes($_POST['post_title']);
         $post				= addslashes($_POST['post']);
+
 
 		/*echo $id_conteudo.'<br>';
 		echo $trilha_id.'<br>';
@@ -45,7 +46,7 @@ if(count($_POST) > 0){
 			mysqli_close($conn);
 		} elseif ($operation == 'update'){
 			echo 'teste: '.html_entity_decode($post);
-			$post = html_entity_decode($post);
+			//$post = html_entity_decode($post);
 			$sql_update = "UPDATE posts SET post = '$post', post_title = '$post_title' WHERE post_id = '$post_id_edit'";
 			echo $sql_update;
 			if (mysqli_query($conn, $sql_update)) {
@@ -60,7 +61,7 @@ if(count($_POST) > 0){
 			//echo 'Status: '.$arr_json[0]['status'];
 		}
 	
-}
+//}
 
 
 ?>

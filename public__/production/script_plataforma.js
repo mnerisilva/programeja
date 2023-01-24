@@ -1,6 +1,8 @@
     //CKEDITOR.replace( 'editor1' );      
     //CKEDITOR.replace( 'editor2' );      
-    //CKEDITOR.replace( 'editor3' );     
+    //CKEDITOR.replace( 'editor3' );    
+    
+    
     
     
      // TinyMCE
@@ -10,6 +12,7 @@
         language: 'pt_BR',
         placeholder: 'Faça suas anotações aqui',
         height: 500,
+        branding: false,
         plugins: [
             'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
             'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
@@ -19,13 +22,18 @@
         toolbar1:'undo redo | blocks | ' +
         'bold italic backcolor | alignleft aligncenter ' +
         'alignright alignjustify | bullist numlist outdent indent | ' +
-        'removeformat |' + ' codesample | fullscreen |  | link image | help',/*
-        toolbar2: 'undo redo | blocks | ' +
-        'bold italic backcolor | alignleft aligncenter ' +
-        'alignright alignjustify | bullist numlist outdent indent | ' +
-        'removeformat |' + ' codesample | fullscreen |  | link image | help',*/
+        'removeformat |   |' + ' codesample |   | link image | help',
         content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
     });
+
+
+    ///// IMPORTANTE: problema com fullscreen do tinyMCE tá relacionado a seu container: containe-editor (class), está com position: fixed //////
+
+    $(document).ready(function(){
+        setTimeout(function(){
+            console.log('Logo da TinyMCE: '+document.querySelector('#form-salva-post .tox-statusbar__branding svg'));
+        },10000);
+    })
 
 
     const _leftCol = document.querySelector('.left_col');
@@ -402,14 +410,17 @@
         }; 
         console.log('o que está chegando no _formSalvaPost');
         console.log(formData);
-        //return;     
         $.ajax({
             type: "POST",
             url: "php/salva_post.php",
             data: formData,
             dataType: "json",
             encode: true,
-        }).success(function (data) {  
+        }).success(function (data) {
+            console.log('TTTTTTTTTTTTTTTTTTTTTT '+formData.operation.value);
+            if(formData.operation.value === 'update'){
+                _btnSalvaTextoDoEditor.value = 'Salvar';
+            }  
             console.log(data[0].ultimo_id_inserido);
             _idDoUltimoPostInserido = parseInt(data[0].ultimo_id_inserido);          
             Prism.highlightAll();   
@@ -1354,7 +1365,7 @@ function listaPostsPorConteudo(id_conteudo) { // lista POSTs do vídeo escolhido
                         editPostIcon.addEventListener('click', function(e){
                             console.log(`Clicou no edit do post: ${e.target.dataset.post_id_edit}`);
                             let _postEditContext = e.target.parentNode.parentNode.parentNode;
-                            let _postEditContextTitle = _postEditContext.querySelector('.post-title h3');
+                            let _postEditContextTitle = _postEditContext.querySelector('.post-title h5');
                             let _postEditContextContent = _postEditContext.querySelector('.post-content').innerHTML;
                             _postEditContext.style.backgroundColor = "moccasin";
                             console.log(_postEditContextTitle.textContent);
