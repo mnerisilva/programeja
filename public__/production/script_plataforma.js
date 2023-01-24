@@ -1304,7 +1304,7 @@ function listaPostsPorConteudo(id_conteudo) { // lista POSTs do vídeo escolhido
                             </div>
                             <hr>
                             <div class="post-title">
-                                <h3>${post.post_title}</h3>
+                                <h5>${post.post_title}</h5>
                             </div>
                             <div class="post-content">${post.post}</div>
                             <div class="post-footer"></div>
@@ -1367,7 +1367,8 @@ function listaPostsPorConteudo(id_conteudo) { // lista POSTs do vídeo escolhido
                             document.querySelector('#post_id_edit').value = e.target.dataset.post_id_edit;
 
                             Prism.highlightAll();
-                            CKEDITOR.instances.editor1.setData(_postEditContextContent);                            
+                            //CKEDITOR.instances.editor1.setData(_postEditContextContent);                            
+                            tinymce.get("editor1").setContent(_postEditContextContent);
                         });
                     });
                 })
@@ -1413,7 +1414,7 @@ function ultimoPostInserido(idDoUltimoPostInserido) { // lista POSTs do vídeo e
                             </div>
                             <hr>
                             <div class="post-title">
-                                <h3>${post.post_title}</h3>
+                                <h5>${post.post_title}</h5>
                             </div>
                             <div class="post-content">${post.post}</div>
                             <div class="post-footer"></div>
@@ -1764,7 +1765,7 @@ function listaPostsPorSnippet(id_conteudo) { // lista POSTs do vídeo escolhido 
                 </div>
                 <hr>
                 <div class="post-title">
-                    <h3>${post.post_title}</h3>
+                    <h5>${post.post_title}</h5>
                 </div>
                 <div class="post-content">${post.post}</div>
                 <div class="post-footer"></div>
