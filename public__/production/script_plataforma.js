@@ -67,6 +67,7 @@
     const _categoriaVideo = document.querySelector('#categoria')
     const _nomeVideo = document.querySelector('#nomevideo');
     const _codigoYt = document.querySelector('#codigoyt');
+    const _containerEditor = document.querySelector('.container-editor');
 
     const _clicaNoBotaoPaginaInicial = document.querySelector('.clica-no-botao-pagina-inicial');
     const _btnAddInsereCategoria = document.querySelector('.btn-add-insere-categoria');
@@ -392,7 +393,15 @@
         let _conteudoTextareaEditor = tinymce.get("editor1").getContent();
         let _postTitle = document.querySelector('#post_title').value; 
         let _operation = _formSalvaPost.querySelector('#operation');    // captura a natureza da operação: 'save': INCLUI novo post, ou, 'update': ATUALIZA de post existente
-        _operation = _operation.value; 
+        _operation = _operation.value;
+        if(_conteudoTextareaEditor == '' || _postTitle.trim() == ''){
+            _containerEditor.classList.add('efeito-fade');            
+            console.log('algum campo não foi preenchido');
+            setTimeout(function(){
+                _containerEditor.classList.remove('efeito-fade');
+            }, 100);
+            return;
+        }
         let _post_id_edit = _formSalvaPost.querySelector('#post_id_edit');    // captura a natureza da operação: 'save': INCLUI novo post, ou, 'update': ATUALIZA de post existente
         _post_id_edit = _post_id_edit.value;                                  // captura a natureza da operação: 'save': INCLUI novo post, ou, 'update': ATUALIZA de post existente                                  // captura a natureza da operação: 'save': INCLUI novo post, ou, 'update': ATUALIZA de post existente
         Prism.highlightAll();
@@ -416,18 +425,24 @@
             data: formData,
             dataType: "json",
             encode: true,
-        }).success(function (data) {
-            console.log('TTTTTTTTTTTTTTTTTTTTTT '+formData.operation.value);
-            if(formData.operation.value === 'update'){
-                _btnSalvaTextoDoEditor.value = 'Salvar';
-            }  
-            console.log(data[0].ultimo_id_inserido);
-            _idDoUltimoPostInserido = parseInt(data[0].ultimo_id_inserido);          
-            Prism.highlightAll();   
-            ultimoPostInserido(_idDoUltimoPostInserido);
-            Prism.highlightAll();            
-            let _operation = _formSalvaPost.querySelector('#operation');    // retorna a natureza da operação para o padrão: status 'save'
-            _operation.value = 'save';                                      // retorna a natureza da operação para o padrão: status 'save'
+            beforeSend: function(){
+                console.log('aguardando resposta do backend');
+            },
+            success: function (data) {
+                console.log('TTTTTTTTTTTTTTTTTTTTTT '+data[0].status);
+                if(data[0].status === 'update'){
+                    _btnSalvaTextoDoEditor.textContent = 'Salvar';
+                    _btnSalvaTextoDoEditor.classList.add('desabilita');
+                } else {           
+                    let _operation = _formSalvaPost.querySelector('#operation');    // retorna a natureza da operação para o padrão: status 'save'
+                    _operation.value = 'save';                       
+                }
+                //console.log(data[0].ultimo_id_inserido);
+                //_idDoUltimoPostInserido = parseInt(data[0].ultimo_id_inserido);          
+                Prism.highlightAll();   
+                //ultimoPostInserido(_idDoUltimoPostInserido);
+                Prism.highlightAll();                                    // retorna a natureza da operação para o padrão: status 'save'
+            }
         });
     });
 

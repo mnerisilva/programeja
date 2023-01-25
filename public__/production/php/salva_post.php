@@ -7,7 +7,7 @@ include('connect.php');
 mysqli_set_charset($conn, "utf8");
 
 
-//if(count($_POST) > 0){
+if(count($_POST) > 0){
 
 
 
@@ -36,32 +36,38 @@ mysqli_set_charset($conn, "utf8");
 
 			if (mysqli_query($conn, $sql_save)) {
 				//echo json_encode(array("statusCode"=>200));
+				$arr_json[0] = ["status" => "save"];
+				//echo json_encode($arr_json);
+				echo json_encode($arr_json);
 			} 
 			else {
 				//echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 			}
 			$ui = mysqli_insert_id($conn);
-			$arr_json[0] = ["ultimo_id_inserido" => $ui];
-			echo json_encode($arr_json);
-			mysqli_close($conn);
+			//$arr_json[0] = ["ultimo_id_inserido" => $ui];
+			//echo json_encode($arr_json);
 		} elseif ($operation == 'update'){
-			echo 'teste: '.html_entity_decode($post);
+			//echo 'teste: '.html_entity_decode($post);
 			//$post = html_entity_decode($post);
 			$sql_update = "UPDATE posts SET post = '$post', post_title = '$post_title' WHERE post_id = '$post_id_edit'";
-			echo $sql_update;
+			//echo $sql_update;
 			if (mysqli_query($conn, $sql_update)) {
 				//echo json_encode(array("statusCode"=>200));
+				$arr_json[0] = ["status" => "update"];
+				echo json_encode($arr_json);
+				//echo $arr_json[0]["status"];
 			} 
 			else {
 				//echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 			}
-			$arr_json[0] = ["status" => "update"];
 			//echo 'passei pelo update '.$post_id_edit;
 			//var_dump($arr_json);
 			//echo 'Status: '.$arr_json[0]['status'];
 		}
+		
+		mysqli_close($conn);
 	
-//}
+}
 
 
 ?>

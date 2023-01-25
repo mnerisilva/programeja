@@ -564,7 +564,8 @@ mysqli_close($conn);
                                   <form id="form-salva-post">
                                     <div class="form-group">
                                       <label class="control-label"><i class="fa fa-arrow-down"></i> Título da postagem</label>
-                                      <input type="text" class="form-control" id="post_title" required="" name="post_title"  placeholder="Título do post...">
+                                      <!--<input type="text" class="form-control" id="post_title" required="" name="post_title"  placeholder="Título do post...">-->
+                                      <input type="text" class="form-control" id="post_title" name="post_title"  placeholder="Título do post...">
                                       <input type="hidden" class="form-control" id="operation" required="" name="operation" value="save">
                                       <input type="hidden" class="form-control" id="post_id_edit" required="" name="post_id_edit" value="">
                                     </div>

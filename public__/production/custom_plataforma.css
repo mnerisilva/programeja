@@ -631,6 +631,7 @@ table.lista-user td, .table th {
     display: none;
     position: fixed;
     width: 30vw;
+    transition: background-color .3s;
 }
 
 .ck-content {
@@ -1172,4 +1173,15 @@ right_col*/
 
 code[class*=language-], pre[class*=language-] {
     color: #767171;
+}
+
+.desabilita {
+    pointer-events: none !important;
+    opacity: .6 !important;
+    cursor: not-allowed !important;
+}
+
+.efeito-fade {
+    transition: background-color .1s;
+    background-color: lightsteelblue;
 }
