@@ -10,7 +10,7 @@
         selector: '#editor1',
         menubar:false,
         language: 'pt_BR',
-        placeholder: 'Faça suas anotações aqui',
+        placeholder: 'Faça aqui suas anotações',
         height: 500,
         branding: false,
         plugins: [
@@ -27,7 +27,17 @@
     });
 
 
-    ///// IMPORTANTE: problema com fullscreen do tinyMCE tá relacionado a seu container: containe-editor (class), está com position: fixed //////
+
+
+    
+    // ESCONDE EDITOR TINYMCE DA PLATAFORMA DE TRILHAS DO USUÁRIO ///
+    document.addEventListener('DOMContentLoaded', function() {
+        _containerEditor.classList.add('esconde'); 
+     });    
+
+
+
+    ///// IMPORTANTE: problema com fullscreen do tinyMCE tá relacionado a seu container: container-editor (class), está com position: fixed //////
 
     $(document).ready(function(){
         setTimeout(function(){
@@ -110,7 +120,6 @@
     const _selectDaCategoriaDoSnippetAdd = document.querySelector('#snippet_categoria_add');
 
     const _userIdLogado = document.querySelector('.span-plataforma-user-id');
-
 
 
 
@@ -432,7 +441,7 @@
                 console.log('TTTTTTTTTTTTTTTTTTTTTT '+data[0].status);
                 if(data[0].status === 'update'){
                     _btnSalvaTextoDoEditor.textContent = 'Salvar';
-                    _btnSalvaTextoDoEditor.classList.add('desabilita');
+                    //_btnSalvaTextoDoEditor.classList.add('desabilita');
                 } else {           
                     let _operation = _formSalvaPost.querySelector('#operation');    // retorna a natureza da operação para o padrão: status 'save'
                     _operation.value = 'save';                       

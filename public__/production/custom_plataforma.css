@@ -967,7 +967,7 @@ right_col*/
 }
 
 .mostra-container-editor {
-    display: block !important;
+    display: block;
 }
 
 @media (min-width: 992px) {
@@ -980,6 +980,8 @@ right_col*/
     height: 90vh;
     overflow-y: scroll;
 }
+
+
 
 .esconde_content_right_col_dashboard_user {
     display: none !important;
@@ -1184,4 +1186,8 @@ code[class*=language-], pre[class*=language-] {
 .efeito-fade {
     transition: background-color .1s;
     background-color: lightsteelblue;
+}
+
+.esconde {
+    display: none;
 }
