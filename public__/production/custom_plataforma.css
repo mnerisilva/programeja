@@ -699,6 +699,7 @@ table.lista-user td, .table th {
 
 .post .post-header {
     background: aliceblue;
+    background: #f9f9f9;
 }
 
 /*.ativo {
@@ -1190,4 +1191,11 @@ code[class*=language-], pre[class*=language-] {
 
 .esconde {
     display: none;
+}
+
+.spin {
+    width: 4rem;
+    display: block;
+    margin: auto;
+    opacity: .3;
 }

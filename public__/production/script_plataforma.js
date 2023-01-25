@@ -446,6 +446,10 @@
                     let _operation = _formSalvaPost.querySelector('#operation');    // retorna a natureza da operação para o padrão: status 'save'
                     _operation.value = 'save';                       
                 }
+                _divListaDePosts.innerHTML = `<img class="spin" src="images/spin.gif" />`;
+                console.log('XXXXXXXXXXXXXXXXXXXXXX '+formData.id_conteudo);
+                listaPostsPorConteudo(formData.id_conteudo);
+                return;
                 //console.log(data[0].ultimo_id_inserido);
                 //_idDoUltimoPostInserido = parseInt(data[0].ultimo_id_inserido);          
                 Prism.highlightAll();   
