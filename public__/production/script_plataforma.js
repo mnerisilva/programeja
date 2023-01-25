@@ -122,6 +122,12 @@
     const _userIdLogado = document.querySelector('.span-plataforma-user-id');
 
 
+    
+    let _postEditContext = '';
+    let _postEditContextTitle = '';
+    let _postEditContextContent = '';
+
+
 
 
 
@@ -442,13 +448,17 @@
                 if(data[0].status === 'update'){
                     _btnSalvaTextoDoEditor.textContent = 'Salvar';
                     //_btnSalvaTextoDoEditor.classList.add('desabilita');
+                    //_postEditContext = 
+                    _postEditContext.querySelector('.post-title h5').textContent = formData.post_title;
+                    _postEditContext.querySelector('.post-content').innerHTML = formData.post;                    
+                    _postEditContext.style.backgroundColor = 'initial';                 
                 } else {           
                     let _operation = _formSalvaPost.querySelector('#operation');    // retorna a natureza da operação para o padrão: status 'save'
-                    _operation.value = 'save';                       
+                    _operation.value = 'save';
+                    _divListaDePosts.innerHTML = `<img class="spin" src="images/spin.gif" />`;
+                    console.log('XXXXXXXXXXXXXXXXXXXXXX '+formData.id_conteudo);
+                    listaPostsPorConteudo(formData.id_conteudo);                       
                 }
-                _divListaDePosts.innerHTML = `<img class="spin" src="images/spin.gif" />`;
-                console.log('XXXXXXXXXXXXXXXXXXXXXX '+formData.id_conteudo);
-                listaPostsPorConteudo(formData.id_conteudo);
                 return;
                 //console.log(data[0].ultimo_id_inserido);
                 //_idDoUltimoPostInserido = parseInt(data[0].ultimo_id_inserido);          
@@ -1392,10 +1402,11 @@ function listaPostsPorConteudo(id_conteudo) { // lista POSTs do vídeo escolhido
                     _editPost.forEach(function(editPostIcon){
                         editPostIcon.addEventListener('click', function(e){
                             console.log(`Clicou no edit do post: ${e.target.dataset.post_id_edit}`);
-                            let _postEditContext = e.target.parentNode.parentNode.parentNode;
-                            let _postEditContextTitle = _postEditContext.querySelector('.post-title h5');
-                            let _postEditContextContent = _postEditContext.querySelector('.post-content').innerHTML;
+                            _postEditContext = e.target.parentNode.parentNode.parentNode;
+                            _postEditContextTitle = _postEditContext.querySelector('.post-title h5');
+                            _postEditContextContent = _postEditContext.querySelector('.post-content').innerHTML;
                             _postEditContext.style.backgroundColor = "moccasin";
+
                             console.log(_postEditContextTitle.textContent);
                             _editTitleEditor.value = _postEditContextTitle.textContent;
                             let __operation = document.querySelector('#operation');
