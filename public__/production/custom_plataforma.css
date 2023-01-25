@@ -463,6 +463,7 @@ table.lista-user td, .table th {
 
 .nav_title {
     width: 25vw;
+    background-color: #ededed;
 }
 
 
@@ -621,6 +622,12 @@ table.lista-user td, .table th {
     border: 1px solid #eaeaea24;
     padding: 5px 6px;
     border-radius: 0;
+    color: black !important;
+}
+
+.site_title span {
+    border: 1px solid #eaeaea24;
+    color: black !important;
 }
 
 .editor-wrapper {
