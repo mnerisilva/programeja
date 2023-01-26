@@ -126,6 +126,7 @@
     let _postEditContext = '';
     let _postEditContextTitle = '';
     let _postEditContextContent = '';
+    let _operation = '';
 
 
 
@@ -231,6 +232,7 @@
 
     // captura elementos do editor da plataforma
     const _btnSalvaTextoDoEditor = document.querySelector('.salva-texto-do-editor');
+    const _btnSalvaPostCancelar = document.querySelector('.salva-post-cancelar');
     const _btnSalvaTextoDoEditorSnippet = document.querySelector('.salva-texto-do-editor-snippet');
     const _editorOne = document.querySelector('#editor-one');
     const _divListaDePosts = document.querySelector('.lista-de-posts');
@@ -382,7 +384,7 @@
                 document.querySelector('.mascara').style.display = 'none';            
                 document.querySelector('.main_container').style.pointerEvents = 'all';              
             }, 500);                
-    });    
+    }); 
 
 
             
@@ -455,9 +457,13 @@
                     //_postEditContext = 
                     _postEditContext.querySelector('.post-title h5').textContent = formData.post_title;
                     _postEditContext.querySelector('.post-content').innerHTML = formData.post;                    
-                    _postEditContext.style.backgroundColor = 'initial';                 
+                    _postEditContext.style.backgroundColor = 'initial';
+                    // na linha a seguir retornamos a "natureza da operação" para o padrão: status 'save'
+                    _operation = _formSalvaPost.querySelector('#operation');
+                    _operation.value = 'save';                
                 } else {           
-                    let _operation = _formSalvaPost.querySelector('#operation');    // retorna a natureza da operação para o padrão: status 'save'
+                    _operation = _formSalvaPost.querySelector('#operation');
+                    // na linha a seguir retornamos a "natureza da operação" para o padrão: status 'save'
                     _operation.value = 'save';
                     _divListaDePosts.innerHTML = `<img class="spin" src="images/spin.gif" />`;
                     console.log('XXXXXXXXXXXXXXXXXXXXXX '+formData.id_conteudo);
@@ -468,6 +474,13 @@
                 _post.style.height = 'auto';
             }
         });
+    });
+
+    
+    // Botão "cancelar" form-salva-post
+    _btnSalvaPostCancelar.addEventListener('click', function(){ 
+        document.querySelector('#post_title').value = '';      
+        tinymce.get("editor1").setContent("");
     });
 
 

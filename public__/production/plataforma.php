@@ -200,7 +200,7 @@ mysqli_close($conn);
         <div class="col-md-3 left_col esconde-left_col">
           <div class="left_col scroll-view" id="left_col">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa-solid fa-code"></i>&nbsp;&nbsp;&nbsp;<span>ProGrameJá!!!</span></a>
+              <a href="index.html" class="site_title"><i class="fa-solid fa-code"></i>&nbsp;&nbsp;&nbsp;<span>GEsTri</span> <i class="fa-solid fa-clone"></i> <span style="font-size: .7em;">ProGrameJá!!!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -571,7 +571,7 @@ mysqli_close($conn);
                                     </div>
                                     <textarea id="editor1" name="editor1"></textarea>
                                     <button type="submit" class="btn btn-secondary salva-texto-do-editor mt-2">Salvar</button>
-                                    <button type="button" class="btn btn-light form-salva-post-cancel mt-2">Cancelar</button>
+                                    <button type="button" class="btn btn-light salva-post-cancelar mt-2">Cancelar</button>
                                   </form>
                               </div>
                           </div> <!-- _editor -->                          
