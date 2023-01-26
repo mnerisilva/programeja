@@ -125,6 +125,10 @@ body.modal-open {
     border: solid thin #dedede47;
 }
 
+#form-salva-post {
+    padding: 0 .3em;
+}
+
 .form-modal-que-serve-ao-cadastro-de-user, .form-modal-que-serve-aos-cadastros, .form-modal-que-serve-aos-cadastros-tipo {
     /*transition: margin-top .9s linear;*/
     background-color: #ffffff;
@@ -655,6 +659,7 @@ table.lista-user td, .table th {
 .active {
     color: #fff !important;
     background-color: #2A3F54;
+    background-color: dimgrey;
 }
 
 
@@ -1231,4 +1236,8 @@ code[class*=language-], pre[class*=language-] {
 
 .container-editor hr {
     margin: 0;
+}
+
+.tox-tinymce {
+    border-radius: 0 !important;
 }

@@ -479,8 +479,7 @@
     
     // Botão "cancelar" form-salva-post
     _btnSalvaPostCancelar.addEventListener('click', function(){ 
-        document.querySelector('#post_title').value = '';      
-        tinymce.get("editor1").setContent("");
+        limpaEditor();
     });
 
 
@@ -910,6 +909,7 @@ $(_carregaConteudoForm).submit(function(event) {
                                 item.addEventListener('click', function(e){
                                     e.preventDefault();
                                     e.stopPropagation();
+                                    limpaEditor();
                                     //e.target.style.height = 50+'px';
                                     removeActive(_trilhaLinksMenu);
                                     console.log(item);
@@ -927,6 +927,7 @@ $(_carregaConteudoForm).submit(function(event) {
                                 item.addEventListener('click', function(e){
                                     e.preventDefault();
                                     e.stopPropagation();
+                                    limpaEditor();
                                     removeAtivo(_linksDosVideos);
                                     e.target.parentNode.classList.toggle('link-ativo');
                                     e.target.parentNode.querySelector('span').style.opacity = 1;
@@ -1903,3 +1904,18 @@ function listaPostsPorSnippet(id_conteudo) { // lista POSTs do vídeo escolhido 
     })
 
 } 
+
+function limpaEditor(){
+    console.log('limpaEditor');
+    document.querySelector('#post_title').value = '';      
+    tinymce.get("editor1").setContent(""); 
+    let __listaPosts = _divListaDePosts.querySelectorAll('.posts');
+    __listaPosts.forEach(function(__post){
+        __post.style.backgroundColor = 'initial';
+    });
+    _btnSalvaTextoDoEditor.textContent = 'Salvar';
+    // na linha a seguir retornamos a "natureza da operação" para o padrão: status 'save'
+    let _operation = document.querySelector('#operation');
+    _operation.value = 'save';
+
+}
