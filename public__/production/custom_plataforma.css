@@ -310,6 +310,13 @@ table.lista-user td, .table th {
     color: #2A3F54 !important;
 }
 
+.profile_info div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10em;
+}
 .nav.side-menu>li>a, .nav.child_menu>li>a {
     color: #2A3F54;
 }
