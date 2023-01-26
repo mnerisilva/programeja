@@ -664,6 +664,7 @@ table.lista-user td, .table th {
 .post {
     border: none;
     border: solid thin #e1e1e170;
+    height: auto;
     /*border-radius: 5px;*/
     /*box-shadow:0px 0px 5px 5px #c9c9c924;
     -webkit-box-shadow:2px 2px 5px 5x #c9c9c924;
@@ -1177,6 +1178,7 @@ right_col*/
 
 .post-content p {
     font-size: initial;
+    height: auto;
 }
 
 .post-content pre {

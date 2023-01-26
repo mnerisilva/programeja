@@ -10,7 +10,7 @@
         selector: '#editor1',
         menubar:false,
         language: 'pt_BR',
-        placeholder: 'Faça aqui suas anotações',
+        placeholder: 'Insira aqui suas notas',
         height: 500,
         branding: false,
         plugins: [
@@ -216,6 +216,8 @@
 
 
     const _modalGerenciarAtribuidos = document.querySelector('.modal#modalGerenciarAtribuidos');
+
+    const _post = document.querySelector('.lista-de-posts');
 
 
 
@@ -445,6 +447,8 @@
             },
             success: function (data) {
                 console.log('TTTTTTTTTTTTTTTTTTTTTT '+data[0].status);
+                _postEditContext.style.height = 'auto';
+                _post.style.height = 'auto';
                 if(data[0].status === 'update'){
                     _btnSalvaTextoDoEditor.textContent = 'Salvar';
                     //_btnSalvaTextoDoEditor.classList.add('desabilita');
@@ -459,12 +463,9 @@
                     console.log('XXXXXXXXXXXXXXXXXXXXXX '+formData.id_conteudo);
                     listaPostsPorConteudo(formData.id_conteudo);                       
                 }
-                return;
-                //console.log(data[0].ultimo_id_inserido);
-                //_idDoUltimoPostInserido = parseInt(data[0].ultimo_id_inserido);          
-                Prism.highlightAll();   
-                //ultimoPostInserido(_idDoUltimoPostInserido);
-                Prism.highlightAll();                                    // retorna a natureza da operação para o padrão: status 'save'
+                Prism.highlightAll();
+                _postEditContext.style.height = 'auto';
+                _post.style.height = 'auto';
             }
         });
     });

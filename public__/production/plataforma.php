@@ -563,7 +563,7 @@ mysqli_close($conn);
                               <hr class="mb-4">
                                   <form id="form-salva-post">
                                     <div class="form-group">
-                                      <label class="control-label"><i class="fa fa-arrow-down"></i> Título da postagem</label>
+                                      <label class="control-label"><i class="fa fa-arrow-down"></i> Título da nota</label>
                                       <!--<input type="text" class="form-control" id="post_title" required="" name="post_title"  placeholder="Título do post...">-->
                                       <input type="text" class="form-control" id="post_title" name="post_title"  placeholder="Título do post...">
                                       <input type="hidden" class="form-control" id="operation" required="" name="operation" value="save">
