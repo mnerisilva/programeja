@@ -711,6 +711,7 @@ table.lista-user td, .table th {
 .post .post-header {
     background: aliceblue;
     background: #f9f9f9;
+    background: gainsboro;
 }
 
 /*.ativo {
@@ -822,6 +823,7 @@ transition: all .3s linear;
 
 .post-tools {
     transition: opacity .4s;
+    color: #576472;
 }
 
 .marginTop {
