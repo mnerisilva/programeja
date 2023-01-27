@@ -1420,7 +1420,7 @@ function listaPostsPorConteudo(id_conteudo) { // lista POSTs do vídeo escolhido
                             _postEditContext = e.target.parentNode.parentNode.parentNode;
                             _postEditContextTitle = _postEditContext.querySelector('.post-title h5');
                             _postEditContextContent = _postEditContext.querySelector('.post-content').innerHTML;
-                            _postEditContext.style.backgroundColor = "moccasin";
+                            _postEditContext.style.backgroundColor = "beige";
 
                             console.log(_postEditContextTitle.textContent);
                             _editTitleEditor.value = _postEditContextTitle.textContent;
