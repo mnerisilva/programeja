@@ -1908,15 +1908,11 @@ function limpaEditor(){
     console.log('limpaEditor');
     document.querySelector('#post_title').value = '';      
     tinymce.get("editor1").setContent(""); 
-    let __listaPosts = document.querySelectorAll('.lista-de-posts .post');
-    __listaPosts.forEach(function(__post){
-        console.log(__post);
-        __post.style.backgroundColor = 'green !important';
+    let __posts = document.querySelectorAll('.post');
+    __posts.forEach(function(__post){
+        __post.style.backgroundColor = "initial";
     });
-    console.log(__listaPosts);
-    console.log(typeof __listaPosts);
     _btnSalvaTextoDoEditor.textContent = 'Salvar';
-    // na linha a seguir retornamos a "natureza da operação" para o padrão: status 'save'
     let _operation = document.querySelector('#operation');
     _operation.value = 'save';
 
