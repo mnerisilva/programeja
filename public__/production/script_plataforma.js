@@ -32,6 +32,8 @@
         _containerEditor.classList.add('esconde'); 
      });    
 
+     
+
 
 
     ///// IMPORTANTE: problema com fullscreen do tinyMCE tá relacionado a seu container: container-editor (class), está com position: fixed //////
