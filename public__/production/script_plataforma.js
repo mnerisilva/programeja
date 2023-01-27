@@ -26,9 +26,6 @@
         content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
     });
 
-
-
-
     
     // ESCONDE EDITOR TINYMCE DA PLATAFORMA DE TRILHAS DO USUÁRIO ///
     document.addEventListener('DOMContentLoaded', function() {
@@ -1909,10 +1906,13 @@ function limpaEditor(){
     console.log('limpaEditor');
     document.querySelector('#post_title').value = '';      
     tinymce.get("editor1").setContent(""); 
-    let __listaPosts = _divListaDePosts.querySelectorAll('.posts');
+    let __listaPosts = document.querySelectorAll('.lista-de-posts .post');
     __listaPosts.forEach(function(__post){
-        __post.style.backgroundColor = 'initial';
+        console.log(__post);
+        __post.style.backgroundColor = 'green !important';
     });
+    console.log(__listaPosts);
+    console.log(typeof __listaPosts);
     _btnSalvaTextoDoEditor.textContent = 'Salvar';
     // na linha a seguir retornamos a "natureza da operação" para o padrão: status 'save'
     let _operation = document.querySelector('#operation');
