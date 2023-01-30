@@ -6,38 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <!--<script src="tinymce/tinymce.min.js"></script>-->
 
-    <link href="css/prism.css" rel="stylesheet">
+    <script src="tinymce/tinymce.min.js"></script>
+
+    <link href="prism.css" rel="stylesheet">
     
-    <script src="js/prism.js"></script>
+    <script src="prism.js"></script>
+
+    <style>
+        .result {
+            width: 100%;
+            height: auto;
+            border: solid thin #dedede;
+            padding: 2em;
+        }
+    </style>
 </head>
 <body>
     <main class="container">
         <h1>TinyMCE</h1>
-        <pre class="language-markup" contenteditable="false"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html lang="pt-BR"</span><span class="token punctuation">&gt;</span></span>
-              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Minha página de teste<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/firefox-icon.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>minha página de teste<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-            </pre>        
-        <button class="btn btn-primary mt-4 clear-btn">Limpar</button>      
+        <div class="form-floating">
+            <textarea id="editor" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Comments</label>
+        </div>     
+        <button class="btn btn-secondary mt-4 clear-btn">Limpar</button>
+        <button class="btn btn-primary mt-4 tosave-btn">Salvar</button>
+        <div class="row mt-4">
+            <div class="col-lg-8 col-md-8">
+                <p>teste de conteudo em duas colunas para testar o comportamento da coluna que contém o conteúdo do editor tinyMCE.</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="result">&nbsp;</div> 
+            </div>
+        </div> 
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        /*tinymce.init({
+        let _data = '';
+        tinymce.init({
             selector: '#editor',
-            menubar:false,
             language: 'pt_BR',
             placeholder: 'Escreva seu comentário aqui',
-            height: 500,
+            height: 350,
             plugins: [
                 'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
                 'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
@@ -47,14 +58,27 @@
             toolbar1:'undo redo | blocks | ' +
             'bold italic backcolor | alignleft aligncenter ' +
             'alignright alignjustify | bullist numlist outdent indent | ' +
-            'removeformat |' + ' codesample | fullscreen |  | link image | help',
+            'removeformat |' + ' codesample | fullscreen |  | link image | help',/*
+            toolbar2: 'undo redo | blocks | ' +
+            'bold italic backcolor | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent | ' +
+            'removeformat |' + ' codesample | fullscreen |  | link image | help',*/
             content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
-        });*/
+        });
 
-        const _button = document.querySelector('.clear-btn');
+        const _buttonLimpar = document.querySelector('.clear-btn');
+        const _buttonSalvar = document.querySelector('.tosave-btn');
+        const _result = document.querySelector('.result');
 
-        _button.addEventListener('click', function(e){
-            //tinymce.activeEditor.setContent("");
+        _buttonLimpar.addEventListener('click', function(e){
+            tinymce.activeEditor.setContent("");
+        });
+        
+        _buttonSalvar.addEventListener('click', function(e){
+            _data =  tinymce.get("editor").getContent();
+            console.log(_data);   
+            _result.innerHTML = _data;       
+            Prism.highlightAll();
         });
       
     </script>
