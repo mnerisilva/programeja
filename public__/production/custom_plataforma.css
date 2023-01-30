@@ -1241,3 +1241,9 @@ code[class*=language-], pre[class*=language-] {
 .tox-tinymce {
     border-radius: 0 !important;
 }
+
+pre[class*=language-] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}

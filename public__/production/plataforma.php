@@ -47,6 +47,8 @@ mysqli_close($conn);
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 
     <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
+    
+    <script src="js/prism.js"></script>
 
     <link href="css/prism.css" rel="stylesheet">
 
@@ -563,7 +565,7 @@ mysqli_close($conn);
                               <hr class="mb-4">
                                   <form id="form-salva-post">
                                     <div class="form-group">
-                                      <label class="control-label"><i class="fa fa-arrow-down"></i> Título da nota</label>
+                                      <label class="control-label"><i class="fa fa-arrow-down"></i> Título do trecho de código</label>
                                       <!--<input type="text" class="form-control" id="post_title" required="" name="post_title"  placeholder="Título do post...">-->
                                       <input type="text" class="form-control" id="post_title" name="post_title"  placeholder="Título do post...">
                                       <input type="hidden" class="form-control" id="operation" required="" name="operation" value="save">
@@ -866,7 +868,6 @@ mysqli_close($conn);
     <script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
     <script src="../vendors/google-code-prettify/src/prettify.js"></script>
 
-    <script src="js/prism.js"></script>
 
     <!-- Include the Ckeditor 4 -->
     <script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>

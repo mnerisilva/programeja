@@ -10,7 +10,7 @@
         selector: '#editor1',
         menubar:false,
         language: 'pt_BR',
-        placeholder: 'Insira aqui suas notas',
+        placeholder: 'Insira aqui seu trecho de código',
         height: 500,
         branding: false,
         plugins: [
@@ -448,9 +448,9 @@
             },
             success: function (data) {
                 console.log('TTTTTTTTTTTTTTTTTTTTTT '+data[0].status);
-                _postEditContext.style.height = 'auto';
                 _post.style.height = 'auto';
                 if(data[0].status === 'update'){
+                    _postEditContext.style.height = 'auto';
                     _btnSalvaTextoDoEditor.textContent = 'Salvar';
                     //_btnSalvaTextoDoEditor.classList.add('desabilita');
                     //_postEditContext = 
