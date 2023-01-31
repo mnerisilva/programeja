@@ -44,13 +44,9 @@ mysqli_close($conn);
     <!-- NProgress -->
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!--<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">-->
 
-    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
-    
-    <script src="js/prism.js"></script>
-
-    <link href="css/prism.css" rel="stylesheet">
+    <!--<link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">-->
 
     
 
@@ -61,7 +57,13 @@ mysqli_close($conn);
     <link href="custom_plataforma.css" rel="stylesheet">
 
     <!-- TinyMCE -->    
-    <script src="tinymce/tinymce.min.js"></script>
+    <!--<script src="tinymce/tinymce.min.js"></script>-->
+    
+    <!--<script src="js/prism.js"></script>-->
+    <script src="_area_de_testes/tinyMCE/teste/prism.js"></script>
+
+    <link href="_area_de_testes/tinyMCE/teste/prism.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tinymce@6.3.1/tinymce.min.js"></script>
   </head>
 
   <body class="nav-md">
@@ -870,8 +872,8 @@ mysqli_close($conn);
 
 
     <!-- Include the Ckeditor 4 -->
-    <script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
-    <script src="ckeditor/ckeditor.js"></script>
+    <!--<script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>-->
+    <!--<script src="ckeditor/ckeditor.js"></script>-->
 
     <!-- Custom Theme Scripts -->
     <!--<script src="../build/js/custom.min.js"></script>-->

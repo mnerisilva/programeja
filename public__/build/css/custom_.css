@@ -3078,7 +3078,7 @@ textarea:focus {
   width: 300px;
   overflow-y: auto; }
 
-span.tag {
+/*span.tag {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   display: block;
@@ -3090,10 +3090,10 @@ span.tag {
   margin-right: 5px;
   font-weight: 500;
   margin-bottom: 5px;
-  font-family: helvetica; }
+  font-family: helvetica; }*/
 
-span.tag a {
-  color: #F1F6F7 !important; }
+/*span.tag a {
+  color: #F1F6F7 !important; }*/
 
 .tagsinput span.tag a {
   font-weight: bold;
@@ -3213,12 +3213,12 @@ ul.timeline li {
   white-space: nowrap;
   text-overflow: ellipsis; }
 
-.tag {
+/*.tag {
   line-height: 1;
   background: #1ABB9C;
-  color: #fff !important; }
+  color: #fff !important; }*/
 
-.tag:after {
+/*.tag:after {
   content: " ";
   height: 30px;
   width: 0;
@@ -3229,7 +3229,7 @@ ul.timeline li {
   pointer-events: none;
   border-top: 14px solid transparent;
   border-bottom: 14px solid transparent;
-  border-left: 11px solid #1ABB9C; }
+  border-left: 11px solid #1ABB9C; }*/
 
 .timeline h2.title {
   position: relative;
