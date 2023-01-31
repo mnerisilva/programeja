@@ -56,14 +56,14 @@ mysqli_close($conn);
     <!--<link href="custom.css" rel="stylesheet">-->
     <link href="custom_plataforma.css" rel="stylesheet">
 
-    <!-- TinyMCE -->    
-    <!--<script src="tinymce/tinymce.min.js"></script>-->
     
     <!--<script src="js/prism.js"></script>-->
     <script src="_area_de_testes/tinyMCE/teste/prism.js"></script>
 
     <link href="_area_de_testes/tinyMCE/teste/prism.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/tinymce@6.3.1/tinymce.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/tinymce@6.3.1/tinymce.min.js"></script>-->
+    <!-- TinyMCE -->    
+    <script src="tinymce/tinymce.min.js"></script>
   </head>
 
   <body class="nav-md">
@@ -768,7 +768,7 @@ mysqli_close($conn);
                                       <select class="form-select form-control" id="snippet_categoria_add" required="" name="snippet_categoria_add">                            
                                       </select>
                                     </div>
-                                    <textarea name="editor2"></textarea>
+                                    <textarea name="editor2" class="edito2"></textarea>
                     <button type="submit" class="btn btn-secondary salva-texto-do-editor-snippet mt-2">Salvar</button>                
                     </form> 
                 </div>
@@ -890,17 +890,17 @@ mysqli_close($conn);
                   removeButtons: 'PasteFromWord'
             });*/
 
-            CKEDITOR.replace('editor2', {
+            /*CKEDITOR.replace('editor2', {
                   extraPlugins: 'editorplaceholder',
                   editorplaceholder: 'Start typing here...',
                   removeButtons: 'PasteFromWord'
-            });
+            });*/
 
-            CKEDITOR.replace('editor3', {
+            /*CKEDITOR.replace('editor3', {
                   extraPlugins: 'editorplaceholder',
                   editorplaceholder: 'Start typing here...',
                   removeButtons: 'PasteFromWord'
-            });                
+            });*/               
           // resolve conflito CKeditor4 e modal Bootstrap 4
           $.fn.modal.Constructor.prototype._enforceFocus = function(){};             
         });
