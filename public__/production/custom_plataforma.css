@@ -358,6 +358,10 @@ table.lista-user td, .table th {
     padding: 2px 4px;
 }
 
+.wrapper-sidebar-menu .badge.badge-secondary {
+    background-color: #6c757d9e !important;
+}
+
 .nav.child_menu li:hover, .nav.child_menu li.active {
     background-color: rgba(0,0,0,.05);
 }
@@ -366,7 +370,7 @@ table.lista-user td, .table th {
     color: #fff !important;
     color: #333 !important;
     background-color: #6c757d !important;
-    background-color: gainsboro !important;
+    background-color: rgb(247, 247, 247) !important;
 }
 
 .nav.side-menu>li>a .fa-chevron-down {
@@ -377,7 +381,7 @@ table.lista-user td, .table th {
     color: #fff !important;
     color: #333 !important;
     background-color: #6c757d !important;
-    background-color: rgb(247, 247, 247) !important;
+    background-color: rgb(235 235 235) !important;
 }
 
 .nav.side-menu>li.active>a {
