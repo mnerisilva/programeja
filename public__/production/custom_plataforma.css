@@ -366,6 +366,10 @@ table.lista-user td, .table th {
     font-size: .5em !important;
 }
 
+.trilha-titulo {
+    font-size: 1.2em !important;
+}
+
 .nav.child_menu li:hover, .nav.child_menu li.active {
     background-color: rgba(0,0,0,.05);
 }

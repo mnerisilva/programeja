@@ -858,7 +858,7 @@ $(_carregaConteudoForm).submit(function(event) {
     _innerHtml = _innerHtml +` <h3><span class="badge badge-secondary">${item.abrev_categoria}</span> <span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>`+
                                 `<div class="menu_section">
                                     <ul class="nav side-menu">
-                                        <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2"> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>` +
+                                        <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2 trilha-titulo"> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>` +
                                             `<ul class="nav child_menu">` +
                                                 `<li style="position: relative;">
                                                     <a href="" data-id_conteudo="${item.id_conteudo}" data-trilha_id=${item.trilha_id} data-conteudo_codigoyoutube="${item.conteudo_codigoyoutube}" data-conteudo_descricao="${item.conteudo_descricao}">${item.conteudo_descricao}</a>
@@ -874,7 +874,7 @@ $(_carregaConteudoForm).submit(function(event) {
                                 </div>` +
                                 `<div class="menu_section">
                                     <ul class="nav side-menu">
-                                        <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2"> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>` +
+                                        <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2 trilha-titulo"> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>` +
                                             `<ul class="nav child_menu">` +
                                                 `<li style="position: relative;">
                                                     <a href="" data-id_conteudo="${item.id_conteudo}" data-trilha_id=${item.trilha_id} data-conteudo_codigoyoutube="${item.conteudo_codigoyoutube}" data-conteudo_descricao="${item.conteudo_descricao}">${item.conteudo_descricao}</a>
