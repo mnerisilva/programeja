@@ -364,13 +364,20 @@ table.lista-user td, .table th {
 
 .nav.side-menu>li>a { /* alterei o menu --- criei esta regra */
     color: #fff !important;
+    color: #333 !important;
     background-color: #6c757d !important;
+    background-color: gainsboro !important;
+}
+
+.nav.side-menu>li>a .fa-chevron-down {
+    color: #333;
 }
 
 .nav.side-menu>li>a:hover {
-    color: #8fa0ab !important;
     color: #fff !important;
-    background-color: #aeb9c3 !important;
+    color: #333 !important;
+    background-color: #6c757d !important;
+    background-color: rgb(247, 247, 247) !important;
 }
 
 .nav.side-menu>li.active>a {
