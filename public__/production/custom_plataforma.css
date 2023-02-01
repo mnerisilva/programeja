@@ -362,6 +362,10 @@ table.lista-user td, .table th {
     background-color: #6c757d9e !important;
 }
 
+.wrapper-sidebar-menu small {
+    font-size: .5em !important;
+}
+
 .nav.child_menu li:hover, .nav.child_menu li.active {
     background-color: rgba(0,0,0,.05);
 }

@@ -851,7 +851,8 @@ $(_carregaConteudoForm).submit(function(event) {
      _innerHtml = _innerHtml +              `</ul>
                                         </li>
                                     </ul>
-                                </div>`
+                                </div>
+                                <hr />`
                                 }
                                 contador = contador = 1;
     _innerHtml = _innerHtml +` <h3><span class="badge badge-secondary">${item.abrev_categoria}</span> <span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>`+
