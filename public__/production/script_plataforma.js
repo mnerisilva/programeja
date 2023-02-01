@@ -947,6 +947,7 @@ $(_carregaConteudoForm).submit(function(event) {
                                     console.log('clicou nos links dos vídeos da trilha');
                                     document.querySelector('.container-editor').style.display = 'block';
                                     e.target.classList.add('ativo');
+                                    e.target.style.pointerEvents = 'all'; ///////////////////////////////////////////////////////// AJUSTE QUE EU, MARCELO, FIZ NO MENU - CONSERTAR BUG
                                     document.querySelector('.embed-responsive-16by9').parentNode.classList.add('ativo');
                                     console.log(e.target);
                                     listaPostsPorConteudo(_idConteudoEscolhidoUserLogado);
