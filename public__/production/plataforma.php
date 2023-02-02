@@ -202,7 +202,7 @@ mysqli_close($conn);
         <div class="col-md-3 left_col esconde-left_col">
           <div class="left_col scroll-view" id="left_col">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa-solid fa-code"></i>&nbsp;&nbsp;&nbsp;<span>GEsTri</span> <i class="fa-solid fa-clone"></i> <span style="font-size: .7em;">ProGrameJá!!!</span></a>
+              <a href="index.html" class="site_title"><i class="fa-solid fa-code"></i>&nbsp;&nbsp;&nbsp;<span>GE</span><span>s</span><span>Tri</span> <i class="fa-solid fa-clone"></i> <span style="font-size: .7em;">ProGrameJá!!!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -544,7 +544,7 @@ mysqli_close($conn);
                                 </div>
                                 <div class="embed-responsive embed-responsive-16by9 embed-video-youtube mb-4">
                                     <!--<iframe allow="autoplay;" allowfullscreen="" class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/mHW1Hsqlp6A?enablejsapi=1&version=3&rel=0&amp;autoplay=1&amp;start=0" autoplay="1" allowfullscreen=""></iframe>-->
-                                    <iframe id="video-abertura" allowfullscreen="" class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/mHW1Hsqlp6A?enablejsapi=1&version=3&rel=0&amp;autoplay=1&amp;start=0" autoplay="1" allowfullscreen=""></iframe>
+                                    <iframe id="video-abertura" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/mHW1Hsqlp6A?enablejsapi=1&version=3&rel=0&amp;autoplay=1&amp;start=0" autoplay="1" allowfullscreen=""></iframe>
                                 </div> 
                                 <hr class="mb-4">
                             <div class="lista-de-posts panel">

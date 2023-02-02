@@ -1275,3 +1275,43 @@ pre[class*=language-] {
     margin: .5em 0;
     overflow: auto;
 }
+
+
+
+@media (max-width: 1280px) {
+    body {
+        font-size: .7em !important;
+    }
+    .menu_section li a {
+        font-size: .7em !important;
+    }
+    .post {
+        font-size: 98% !important;        
+    }
+    .post h5, .post p {
+        font-size: 98% !important;        
+    }
+    .post pre {
+        font-size: 98% !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    body {
+        font-size: .8em !important;
+    }
+    .menu_section li a {
+        font-size: .8em !important;
+    }
+    .post {
+        font-size: 99% !important;        
+    }
+    .post h5, .post p {
+        font-size: 99% !important;        
+    }
+    .post pre {
+        font-size: 99% !important;
+    }
+}
+
+
