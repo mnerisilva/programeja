@@ -10,7 +10,7 @@
         menubar:false,
         language: 'pt_BR',
         placeholder: 'Insira aqui seu trecho de código',
-        height: 500,
+        height: 350,
         branding: false,
         plugins: [
             'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
