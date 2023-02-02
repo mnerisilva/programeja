@@ -1,9 +1,4 @@
-    //CKEDITOR.replace( 'editor1' );      
-    //CKEDITOR.replace( 'editor2' );      
-    //CKEDITOR.replace( 'editor3' );    
-    
 
-    
      // TinyMCE
      tinymce.init({
         selector: '#editor1',
