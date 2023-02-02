@@ -1044,6 +1044,6 @@ mysqli_close($conn);
     <script src="js/dashboard/script_dashboard.js"></script>
     <script src="js/cadastro/script_cadastro_de_trilha.js"></script>
     <script src="js/cadastro/script_cadastro_de_videos.js"></script>
-    <script src="script_precessa_tela_trilha_usuario.js"></script>
+    <!--<script src="script_precessa_tela_trilha_usuario.js"></script>-->
   </body>
 </html>
