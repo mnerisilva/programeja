@@ -31,6 +31,7 @@ mysqli_close($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>| Dashboard Admin | </title>
+    <link href="images/favicon.ico" rel="shortcut icon" />
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -1040,7 +1041,7 @@ mysqli_close($conn);
     
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-    <script src="script_dashboard.js"></script>
+    <script src="js/dashboard/script_dashboard.js"></script>
     <script src="js/cadastro/script_cadastro_de_trilha.js"></script>
     <script src="js/cadastro/script_cadastro_de_videos.js"></script>
     <script src="script_precessa_tela_trilha_usuario.js"></script>

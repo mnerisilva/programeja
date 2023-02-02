@@ -13,12 +13,14 @@
             'insertdatetime', 'media', 'table', 'help', 'wordcount', 'codesample', 'fullscreen'
         ],
         toolbar_mode: 'sliding',
-        toolbar1:'undo redo | blocks | ' +
-        'bold italic backcolor | alignleft aligncenter ' +
-        'alignright alignjustify | bullist numlist outdent indent | ' +
-        'removeformat |   |' + ' codesample |   | link image | help',
+        toolbar1:'bold italic backcolor | alignleft aligncenter ' +
+        'alignright alignjustify | bullist numlist | ' +
+        'removeformat | link image | outdent indent | help',
+        toolbar2:'|   | codesample |   |',
         content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
     });
+
+    // toolbar1:'undo redo | blocks | ' +
 
     
     // ESCONDE EDITOR TINYMCE DA PLATAFORMA DE TRILHAS DO USUÁRIO ///

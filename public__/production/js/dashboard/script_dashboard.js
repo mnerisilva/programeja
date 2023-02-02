@@ -632,7 +632,7 @@ function loopingDeMontagemAjaxListaVideosGeral(nodeList){
                         _td2.textContent = texto_t2;
                         // ***************************************** warnning free icon fonteawesome -  <i class="fa-solid fa-circle-exclamation"></i> ou <i class="fa-solid fa-triangle-exclamation"></i>
                         //_td2.innerHTML = `<a href="https://www.youtube.com/watch?v=${videoItem.codigo}" class="link-youtube" data-youtube_code="${videoItem.codigo}" data-descricao="${videoItem.descricao}"><i class="fa-brands fa-youtube youtube-icon"></i> ${texto_t2}</a>`;
-                        _td2.innerHTML = `<a href="https://www.youtube.com/watch?v=${videoItem.codigo}" class="link-youtube" data-id_conteudotipo="${videoItem.id_conteudotipo}" data-youtube_code="${videoItem.codigo}" data-descricao="${videoItem.descricao}"><img src="https://img.youtube.com/vi/${videoItem.codigo}/hqdefault.jpg" class="img-responsive" style="max-width: 180px"> ${texto_t2}</a>`;
+                        _td2.innerHTML = `<a href="https://www.youtube.com/watch?v=${videoItem.codigo}" class="link-youtube" data-id_conteudotipo="${videoItem.id_conteudotipo}" data-youtube_code="${videoItem.codigo}" data-descricao="${videoItem.descricao}"><img src="https://img.youtube.com/vi/${videoItem.codigo}/mqdefault.jpg" class="img-responsive" style="max-width: 180px"> ${texto_t2}</a>`;
                         _td3.appendChild(_nodeText3);
                         _td4.innerHTML = `<form class="form-vincula-video-a-trilha"><input type="hidden" class="input-form-vincula-video-a-trilha" name="input-form-vincula-video-a-trilha" value="${videoItem.id}"><button type="submit" class="btn btn-secondary btn-vincula" data-id="${videoItem.id}" data-id_conteudo_indice="${videoItem.id_conteudo_indice}" data-descricao="${videoItem.descricao}" data-codigo="${videoItem.codigo}"><i class="fa fa-plus" aria-hidden="true"></i> Vincular</button></form>`;
                         _tr.appendChild(_td1);
@@ -718,7 +718,7 @@ function loopingDeMontagemAjaxListaVideosDaTrilha(nodeList){
 function salvaUser(formData){
                     $.ajax({
                         type: "POST",
-                        url: "php/backend/salva_user.php",
+                        url: "../../php/backend/salva_user.php",
                         data: formData,
                         dataType: "json",
                         encode: true,
@@ -752,7 +752,7 @@ function salvaUserEdit(formData){
                     console.log(formData);
                     $.ajax({
                         type: "POST",
-                        url: "php/backend/salva_user_editado.php",
+                        url: "../../php/backend/salva_user_editado.php",
                         data: formData,
                         dataType: "json",
                         encode: true,
@@ -789,7 +789,7 @@ function excluiUser(user_id){
         };    
         $.ajax({
             type: "POST",
-            url: "php/backend/exclui_user.php",
+            url: "../../php/backend/exclui_user.php",
             data: formData,
             dataType: "json",
             encode: true,
@@ -809,7 +809,7 @@ function excluiUser(user_id){
 function vinculaVideo(formData){
                     $.ajax({
                         type: "POST",
-                        url: "php/backend/vincula_video_a_trilha.php",
+                        url: "../../php/backend/vincula_video_a_trilha.php",
                         data: formData,
                         dataType: "json",
                         encode: true,
@@ -831,7 +831,7 @@ function vinculaVideo(formData){
 function desvinculaVideo(formData){
                     $.ajax({
                         type: "POST",
-                        url: "php/backend/desvincula_video_da_trilha.php",
+                        url: "../../php/backend/desvincula_video_da_trilha.php",
                         data: formData,
                         dataType: "json",
                         encode: true,
@@ -855,7 +855,7 @@ function desvinculaVideo(formData){
 function vinculaTrilhaAoUser(formData){
                     $.ajax({
                         type: "POST",
-                        url: "php/backend/vincula_trilha_ao_user.php",
+                        url: "../../php/backend/vincula_trilha_ao_user.php",
                         data: formData,
                         dataType: "json",
                         encode: true,
@@ -875,7 +875,7 @@ function vinculaTrilhaAoUser(formData){
 function desvinculaTrilhaDoUser(formData){
                     $.ajax({
                         type: "POST",
-                        url: "php/backend/desvincula_trilha_do_user.php",
+                        url: "../../php/backend/desvincula_trilha_do_user.php",
                         data: formData,
                         dataType: "json",
                         encode: true,
@@ -899,7 +899,7 @@ function desvinculaTrilhaDoUser(formData){
 /*function listaTabelaDaEsquerda () {
                 $.ajax({
                     type: "POST",
-                    url: "php/backend/lista.php",
+                    url: "../../php/backend/lista.php",
                     dataType: "json",
                     encode: true,
                 }).done(function (data) {
@@ -1719,7 +1719,7 @@ function listaGeralDeUsuarios(){
                 };
                 $.ajax({
                     type: "POST",
-                    url: "php/backend/verifica_se_o_user_pode_ser_excluido.php",
+                    url: "../../php/backend/verifica_se_o_user_pode_ser_excluido.php",
                     data: formData,
                     dataType: "json",
                     encode: true,
