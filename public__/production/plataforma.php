@@ -1,6 +1,6 @@
 <?php
 // Conexão
-require_once 'PHP/connect.php';
+require_once 'PHP/backend/connect.php';
 
 // Sessão
 session_start();
@@ -57,8 +57,8 @@ mysqli_close($conn);
     <!-- Custom Theme Style -->
     <!--<link href="../build/css/custom.min.css" rel="stylesheet">-->
     <link href="../build/css/custom_.css" rel="stylesheet">
-    <!--<link href="custom.css" rel="stylesheet">-->
-    <link href="custom_plataforma.css" rel="stylesheet">
+    <!--<link href="css/custom.css" rel="stylesheet">-->
+    <link href="css/plataforma/custom_plataforma.css" rel="stylesheet">
 
     <!-- TinyMCE -->    
     <script src="tinymce/tinymce.min.js"></script>

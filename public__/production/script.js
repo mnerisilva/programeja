@@ -60,7 +60,7 @@ $(document).ready(function () {
   $.ajax({
     // inicio do código ajax listagem inicial - cadastro de vídeo avulso
     type: "POST",
-    url: "php/lista.php",
+    url: "php/backend/lista.php",
     dataType: "json",
     encode: true,
   }).done(function (data) {
@@ -112,7 +112,7 @@ $(document).ready(function () {
     };
     $.ajax({
       type: "POST",
-      url: "php/recebe.php",
+      url: "php/backend/recebe.php",
       data: formData,
       dataType: "json",
       encode: true,
@@ -181,7 +181,7 @@ $(document).ready(function () {
   function listarVideos() {
     $.ajax({
       type: "POST",
-      url: "php/lista.php",
+      url: "php/backend/lista.php",
       dataType: "json",
       encode: true,
     }).done(function (data) {
@@ -264,7 +264,7 @@ $(document).ready(function () {
   function exclui(_id) {
     /*$.ajax({
       type: "POST",
-      url: "php/exclui.php",
+      url: "php/backend/exclui.php",
        data: {'id':_id},
       dataType: "json",
       encode: true,
@@ -281,7 +281,7 @@ $(document).ready(function () {
     };
     $.ajax({
       type: "POST",
-      url: "php/exclui.php",
+      url: "php/backend/exclui.php",
       data: formData,
       dataType: "json",
       encode: true,

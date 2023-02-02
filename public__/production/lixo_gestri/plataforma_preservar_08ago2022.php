@@ -47,7 +47,7 @@ mysqli_close($conn);
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
-    <!--<link href="custom.css" rel="stylesheet">-->
+    <!--<link href="css/custom.css" rel="stylesheet">-->
     <link href="custom_plataforma.css" rel="stylesheet">
   </head>
 

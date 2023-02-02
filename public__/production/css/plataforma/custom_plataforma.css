@@ -580,7 +580,7 @@ table.lista-user td, .table th {
 
 
 
-/*.content_right_col_dashboard_user::-webkit-scrollbar {
+.content_right_col_dashboard_user::-webkit-scrollbar {
   width: 0px;
   height: 0px;
 }
@@ -612,10 +612,6 @@ table.lista-user td, .table th {
 }
 .content_right_col_dashboard_user::-webkit-scrollbar-corner {
   background: transparent;
-}*/
-
-.content_right_col_dashboard_user {
-    overflow-x: hidden !important
 }
 
 
@@ -1279,43 +1275,3 @@ pre[class*=language-] {
     margin: .5em 0;
     overflow: auto;
 }
-
-
-
-@media (max-width: 1280px) {
-    body {
-        font-size: .7em !important;
-    }
-    .menu_section li a {
-        font-size: .7em !important;
-    }
-    .post {
-        font-size: 98% !important;        
-    }
-    .post h5, .post p {
-        font-size: 98% !important;        
-    }
-    .post pre {
-        font-size: 98% !important;
-    }
-}
-
-@media (min-width: 1400px) {
-    body {
-        font-size: .8em !important;
-    }
-    .menu_section li a {
-        font-size: .8em !important;
-    }
-    .post {
-        font-size: 99% !important;        
-    }
-    .post h5, .post p {
-        font-size: 99% !important;        
-    }
-    .post pre {
-        font-size: 99% !important;
-    }
-}
-
-

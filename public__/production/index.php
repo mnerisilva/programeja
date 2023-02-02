@@ -1,6 +1,6 @@
 <?php
 // Conexão
-require_once 'php/connect.php';
+require_once 'php/backend/connect.php';
 
 // Sessão
 session_start();

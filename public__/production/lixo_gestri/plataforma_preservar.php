@@ -31,8 +31,6 @@ mysqli_close($conn);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="data:,">
-
     <title>| Dashboard Admin | </title>
 
     <!-- Bootstrap -->
@@ -43,64 +41,13 @@ mysqli_close($conn);
     <!-- NProgress -->
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
 
-    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
-
-    <link href="css/prism.css" rel="stylesheet">
-
     <!-- Custom Theme Style -->
-    <!--<link href="../build/css/custom.min.css" rel="stylesheet">-->
-    <link href="../build/css/custom_.css" rel="stylesheet">
-    <!--<link href="custom.css" rel="stylesheet">-->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <!--<link href="css/custom.css" rel="stylesheet">-->
     <link href="custom_plataforma.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
-
-
-
-  
-
-    <div class="mascara"></div>
-
-
-
-      <!-- popup confirma exclusao post -->
-      <div class="confirma-exclusao-post">
-            Confirma exclusão: 
-            <form id="form-confirma-exclusao-post-sim">
-                <input type="hidden" name="post_id" value="${post.post_id}" />
-                <button type="submit" class="btn btn-success btn-sim-exclui-post">
-                    Sim
-                </button> 
-            </form>            
- 
-            <form id="form-confirma-exclusao-post-nao">
-                <input type="hidden" name="post_id" value="${post.post_id}" />
-                <button type="submit" class="btn btn-secondary btn-nao-exclui-post">
-                    Não
-                </button> 
-            </form>
-      </div> 
-
-      
-        <!-- Modal projeto-exemplo -->
-        <div class="modal fade" id="projeto-exemplo" tabindex="-1" role="dialog" aria-labelledby="projeto-exemploLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="projeto-exemploLabel"><i class="fa-solid fa-user-plus"></i> Categoria <small>Cadastrar</small></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                  </div>
-              </div><!-- modal-content -->
-            </div><!-- modal-dialog -->
-        </div>
-
-
-
     <div class="container body">
       <div class="main_container">
 
@@ -108,21 +55,10 @@ mysqli_close($conn);
 
 
 
- 
 
 
 
-           
-
-      
-
-      <div class="code-tester">        
-        <!--<object class="iframe" data="https://liveweave.com/" width="" height="" type="text/html"></object>-->
-        <!--<object class="iframe" data="https://michaelsboost.com/kodeWeave/editor/" width="" height="" type="text/html"></object>-->
-      </div>
-
-      
-       
+        <!--<div class="mask"></div>-->
 
 
 
@@ -474,10 +410,10 @@ mysqli_close($conn);
 
 
 
-        <div class="col-md-3 left_col esconde-left_col">
+        <div class="col-md-3 left_col">
           <div class="left_col scroll-view" id="left_col">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa-solid fa-code"></i>&nbsp;&nbsp;&nbsp;<span>ProGrameJá!!!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>ProGrameJá!!!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -489,52 +425,128 @@ mysqli_close($conn);
                 <img src="<?php echo $dados['user_photo']; ?>" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <div>
-                  <span><?php echo $saudacao; ?></span>
-                  <h2><?php echo $dados['user_name']; ?></h2>
-                  <span class="id-usuario-logado" style="display: none !important;"><?php echo $dados['user_id']; ?></span>
-                </div>
-                <div></div>
+                <span><?php echo $saudacao; ?></span>
+                <h2><?php echo $dados['user_name']; ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
 
             <br />
 
-
-
-
-
-
-
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              
-                <i class="fa-solid fa-circle-dot update-notification"></i>                
-              
-              <!--<img class="spinner" src="assets/img/spinner/spinner.gif" alt="" />-->
-              <div class="wrapper-sidebar-menu">
-                  <!-- ... -->
+              <h3><span class="badge badge-secondary">Html</span> <span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="fa-solid fa-list-ul"></i><span> Primeiro Html </span><span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.html">Como INSERIR IMAGEM no HTML - COMPLETO!!!! Passo a</a></li>
+                      <li><a href="index2.html">HTML em 7 minutos</a></li>
+                      <li><a href="index3.html">HTML in 100 Seconds</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
-            </div><!-- /sidebar menu -->
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="fa-solid fa-list-ul"></i><span> Html como você nunca viu </span><span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="e_commerce.html">Aprendendo Lógica de Programação</a></li>
+                      <li><a href="projects.html">Lógica de Programação - Aula 01 - Introdução</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="fa-solid fa-list-ul"></i><span> Primeiro Html </span><span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="e_commerce.html">Aprendendo Lógica de Programação</a></li>
+                      <li><a href="projects.html">Lógica de Programação - Aula 01 - Introdução</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <h3><span class="badge badge-secondary">Lógica</span><span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="fa-solid fa-list-ul"></i><span> Iniciando com lógica de programação </span><span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="e_commerce.html">Aprendendo Lógica de Programação</a></li>
+                      <li><a href="projects.html">Lógica de Programação - Aula 01 - Introdução</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <h3><span class="badge badge-secondary">Lógica</span></h3>
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="fa-solid fa-list-ul"></i><span> Iniciando com lógica de programação </span><span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="e_commerce.html">Aprendendo Lógica de Programação</a></li>
+                      <li><a href="projects.html">Lógica de Programação - Aula 01 - Introdução</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <h3><span class="badge badge-secondary">Banco de dados</span><span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="fa-solid fa-list-ul"></i><span> Iniciando com lógica de programação </span><span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="e_commerce.html">Aprendendo Lógica de Programação</a></li>
+                      <li><a href="projects.html">Lógica de Programação - Aula 01 - Introdução</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <h3><span class="badge badge-secondary">Css</span><span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="fa-solid fa-list-ul"></i><span> Iniciando com lógica de programação </span><span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="e_commerce.html">Aprendendo Lógica de Programação</a></li>
+                      <li><a href="projects.html">Lógica de Programação - Aula 01 - Introdução</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <h3><span class="badge badge-secondary">Flex box</span><span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="fa-solid fa-list-ul"></i><span> Iniciando com lógica de programação </span><span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="e_commerce.html">Aprendendo Lógica de Programação</a></li>
+                      <li><a href="projects.html">Lógica de Programação - Aula 01 - Introdução</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <h3><span class="badge badge-secondary">Algoritimo</span><span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="fa-solid fa-list-ul"></i><span> Iniciando com lógica de programação </span><span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="e_commerce.html">Aprendendo Lógica de Programação</a></li>
+                      <li><a href="projects.html">Lógica de Programação - Aula 01 - Introdução</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              s<h3><span class="badge badge-secondary">Devops</span><span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="fa-solid fa-list-ulg"></i><span> Iniciando com lógica de programação </span><span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="e_commerce.html">Aprendendo Lógica de Programação</a></li>
+                      <li><a href="projects.html">Lógica de Programação - Aula 01 - Introdução</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </div>
+            <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
@@ -543,14 +555,11 @@ mysqli_close($conn);
               </a>
               <a data-toggle="tooltip" data-placement="top" title="FullScreen">
                 <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a><!--
+              </a>
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>-->
-              <a class="linke" data-toggle="tooltip" data-placement="top" title="Testar código">
-                <span class="" aria-hidden="true"><i class="fa-solid fa-flask-vial botao-testar"></i></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="logout.php">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -573,7 +582,7 @@ mysqli_close($conn);
  
 
         <!-- top navigation -->
-        <div class="top_nav estica-top_nav">
+        <div class="top_nav">
             <div class="nav_menu">
                 <div class="nav toggle">
                   <a id="menu_toggle"><i class="fa fa-bars"></i></a>
@@ -660,9 +669,9 @@ mysqli_close($conn);
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col estica-right_col" role="main">
+        <div class="right_col" role="main">
           <div class="classX">
-            <div class="page-title" style="display: none;">
+            <div class="page-title">
               <div class="title_left">
                 <h3>Gestão de Trilhas de Estudo</h3>
               </div>
@@ -680,9 +689,9 @@ mysqli_close($conn);
             <div class="clearfix"></div>
             <div class="row">
               <div class="col-md-12 col-sm-12  ">
-                <!--<div class="x_panel">
+                <div class="x_panel">
                   <div class="x_title">
-                    <h2><i class="fa fa-arrow-down"></i>&nbsp;Vídeos das trilhas</h2>
+                    <h2><i class="fa fa-arrow-down"></i>&nbsp;Suas trilhas</h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <button class="btn btn-secondary button-4 btn-insere-user" data-toggle="modal" data-target="#form_cadastro_de_user" style="display: none;"><i class="fa-solid fa-plus"></i>
                         &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-user-plus"></i></button>
@@ -700,92 +709,72 @@ mysqli_close($conn);
                     </ul>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content" style="height: 100vh; overflow: scroll; height: calc(100vh - 200px);">
-                  -->
-                  <!--Add content to the page ...-->
-                  <!--
+                  <div class="x_content">
+                      <!--Add content to the page ...-->
                       <div class="row">
-                          <div class="col-md-4 mt-2 filtro">                            
+                        <div class="col-md-12 d-flex justify-content-around align-items-center titulo mt-2">
+                          <div class="icon-user-titulo d-flex justify-content-center align-items-center">  
                           </div>
-                          <div class="col-md-4 mt-2">
-                                <div class="animated flipInY col-lg-6 col-md-6 col-sm-6  ">
-                                    <div class="tile-stats">
-                                      <div class="icon"><i class="fa fa-caret-square-o-right"></i>
-                                      </div>
-                                      <div class="count">179</div>
-
-                                      <h3>New Sign ups</h3>
-                                      <p>Lorem ipsum psdea itgum rixt.</p>
-                                    </div>
-                                </div>
-                                <div class="embed-responsive embed-responsive-16by9 mb-4">
-                                    <iframe allow="autoplay;" allowfullscreen="" class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/mHW1Hsqlp6A?enablejsapi=1&version=3&rel=0&amp;autoplay=1&amp;start=0" autoplay="1" allowfullscreen=""></iframe>
-                                </div> 
-                                <hr class="mb-4">
-                            <div class="lista-de-posts panel"></div>                             
-                          </div>
-
-                          <div class="col-md-4 mt-2 _editor coluna-direita-pagina-principal"> 
-                              <div class="lista-de-projetos">
-                                <ul class="quick-list">
-                                  <li>Cena interativa&nbsp;<span class="btn-projeto" data-toggle="modal" data-target="#projeto-exemplo"><i class="fa-solid fa-eye" data-projeto="svg_ambiente_empresa"></i></span></li>
-                                  <li>Customizador de contrator&nbsp;<span class="btn-projeto" data-toggle="modal" data-target="#projeto-exemplo"><i class="fa-solid fa-eye" data-projeto="customizador_de_contratos"></i></span></li>
-                                  <li>Controle de auditório&nbsp;<span class="btn-projeto" data-toggle="modal" data-target="#projeto-exemplo"><i class="fa-solid fa-eye" data-projeto="controle_auditorio"></i></span></li>
-                                  <li>Simulador de empréstimo&nbsp;<span class="btn-projeto" data-toggle="modal" data-target="#projeto-exemplo"><i class="fa-solid fa-eye" data-projeto="iframe_simulador_emprestimos"></i></span></li>
-                                </ul>
-                              </div>
-                              <div class="container-editor mostra-container-editor">                              
-                              <hr class="mb-4">
-                                  <form id="form-salva-post">
-                                    <div class="form-group">--><!-- -->
-                                      <!--<label class="control-label"><i class="fa fa-arrow-down"></i> Título da postagem</label>
-                                      <input type="text" class="form-control" id="post_title" required="" name="post_title"  placeholder="Título do post...">
-                                    </div>
-                                    <textarea name="editor1"></textarea>
-                                    <button type="submit" class="btn btn-secondary salva-texto-do-editor mt-2">Salvar</button>
-                                  </form>
-                              </div>
-
-                          </div>--> <!-- _editor -->
-                          <!--
+                        </div>
                       </div>
-
                       <div class="row">
-                        <div class="col-md-6 mt-2">
-                        </div> 
-                        <div class="col-md-6 mt-2">  
-                        </div>
-                        </div>
-                      </div>                      
-                      <div class="row">
-                        <div class="col-md-6 mt-2">
-                          </div>
-                        <div class="col-md-6 mt-2">
+                        <div class="col-md-12 mt-2">
+                            <div class="container">
+                                <div class="row"></div>
+                                <div class="col-md-6">
+                                  <table class="table table-striped jambo_table lista-user" style="display: none;">
+                                    <thead>
+                                      <tr>
+                                        <th></th>
+                                        <th>#</th>
+                                        <th><i class="fa-solid fa-list-ol"></i>&nbsp;&nbsp;Usuário</th>
+                                        <th><i class="fa-solid fa-pen"></i>&nbsp;&nbsp;editar</th>
+                                        <th><i class="fa-solid fa-plus-minus"></i>&nbsp;&nbsp;atribuir trilha</th>
+                                        <th><i class="fa-solid fa-eye"></i>&nbsp;&nbsp;exibe dados</th>
+                                        <th><i class="fa-solid fa-minus"></i>&nbsp;&nbsp;excluir</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                  </table>    
+                                <table class="table table-striped table-responsive-sm table-responsive-md lista-trilhas-do-user">
+                                  <thead>
+                                    <tr>
+                                      <th>#</th>
+                                      <th>nome</th>
+                                      <th>tipo</th>
+                                      <th>categoria</th>
+                                      <th>status</th>
+                                      <th></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table> 
+                                </div> 
+                                <div class="col-md-6">
+                                  <table class="table table-striped lista-trilhas-do-user-plataforma">
+                                    <thead>
+                                      <tr>
+                                        <th></th>
+                                        <th>#</th>
+                                        <th><i class="fa-solid fa-list-ol"></i>&nbsp;&nbsp;Usuário</th>
+                                        <th><i class="fa-solid fa-pen"></i>&nbsp;&nbsp;editar</th>
+                                        <th><i class="fa-solid fa-plus-minus"></i>&nbsp;&nbsp;atribuir trilha</th>
+                                        <th><i class="fa-solid fa-eye"></i>&nbsp;&nbsp;exibe dados</th>
+                                        <th><i class="fa-solid fa-minus"></i>&nbsp;&nbsp;excluir</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                  </table>
+                                </div>                     
+                            </div>
                           </div>
                         </div>
                       </div>
                   </div>
-                </div>-->
+                </div>
               </div>
             </div>
           </div>
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
         </div>
         <!-- /page content -->
 
@@ -1219,7 +1208,7 @@ mysqli_close($conn);
 
 
 
- 
+
 
     
 
@@ -1234,31 +1223,11 @@ mysqli_close($conn);
     <!-- mask input -->
     <script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
     
-    <script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-    <script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-    <script src="../vendors/google-code-prettify/src/prettify.js"></script>
-
-    <script src="js/prism.js"></script>
-
-    <!-- Include the Ckeditor 4 -->
-    <script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
-    <script src="ckeditor/ckeditor.js"></script>
-
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
     <script src="script_plataforma.js"></script>
     <script src="script_cadastro_de_trilha.js"></script>
     <script src="script_cadastro_de_videos.js"></script>
     <script src="script_precessa_tela_trilha_usuario.js"></script>
-
-
-      <script>
-          CKEDITOR.replace('editor1', {
-            extraPlugins: 'editorplaceholder',
-            editorplaceholder: 'Start typing here...',
-            removeButtons: 'PasteFromWord'
-      });
-  </script>
-
   </body>
 </html>

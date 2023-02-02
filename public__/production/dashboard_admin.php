@@ -1,6 +1,6 @@
 <?php
 // Conexão
-require_once 'PHP/connect.php';
+require_once 'PHP/backend/connect.php';
 
 // Sessão
 session_start();
@@ -42,7 +42,7 @@ mysqli_close($conn);
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
-    <link href="custom.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -1041,8 +1041,8 @@ mysqli_close($conn);
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
     <script src="script_dashboard.js"></script>
-    <script src="script_cadastro_de_trilha.js"></script>
-    <script src="script_cadastro_de_videos.js"></script>
+    <script src="js/cadastro/script_cadastro_de_trilha.js"></script>
+    <script src="js/cadastro/script_cadastro_de_videos.js"></script>
     <script src="script_precessa_tela_trilha_usuario.js"></script>
   </body>
 </html>

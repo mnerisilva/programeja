@@ -135,7 +135,7 @@ $(_registreSeForm).submit(function(event){
             };
             $.ajax({
                 type: "POST",
-                url: "php/cadastra_usuario.php",
+                url: "php/backend/cadastra_usuario.php",
                 data: formData,
                 dataType: "json",
                 encode: true,
@@ -348,7 +348,7 @@ _inputEmaiEsqueciMinhaSenha.onfocus = function(){_mailError.style.opacity = 0;_i
 
                         $.ajax({
                             type: "POST",
-                            url: "php/email_esqueceu_senha.php",
+                            url: "php/backend/email_esqueceu_senha.php",
                             data: formData,
                             dataType: "json",
                             encode: true,
