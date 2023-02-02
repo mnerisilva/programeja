@@ -15,7 +15,7 @@
         plugins: [
             'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
             'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-            'insertdatetime', 'media', 'table', 'help', 'wordcount', 'codesample', 'fullscreen' , 'autoresize'
+            'insertdatetime', 'media', 'table', 'help', 'wordcount', 'codesample', 'fullscreen'
         ],
         toolbar_mode: 'sliding',
         toolbar1:'undo redo | blocks | ' +

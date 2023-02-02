@@ -580,7 +580,7 @@ table.lista-user td, .table th {
 
 
 
-.content_right_col_dashboard_user::-webkit-scrollbar {
+/*.content_right_col_dashboard_user::-webkit-scrollbar {
   width: 0px;
   height: 0px;
 }
@@ -612,7 +612,7 @@ table.lista-user td, .table th {
 }
 .content_right_col_dashboard_user::-webkit-scrollbar-corner {
   background: transparent;
-}
+}*/
 
 
 .xxx {
