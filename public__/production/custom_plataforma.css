@@ -614,6 +614,10 @@ table.lista-user td, .table th {
   background: transparent;
 }*/
 
+.content_right_col_dashboard_user {
+    overflow-x: hidden !important
+}
+
 
 .xxx {
     border: solid #000;
