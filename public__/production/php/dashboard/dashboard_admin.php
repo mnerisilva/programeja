@@ -1,6 +1,6 @@
 <?php
 // Conexão
-require_once 'PHP/backend/connect.php';
+require_once '../backend/connect.php';
 
 // Sessão
 session_start();
@@ -31,19 +31,19 @@ mysqli_close($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>| Dashboard Admin | </title>
-    <link href="images/favicon.ico" rel="shortcut icon" />
+    <link href="../../images/favicon.ico" rel="shortcut icon" />
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="../../../vendors/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="../../../build/css/custom.min.css" rel="stylesheet">
+    <link href="../../css/custom.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -437,7 +437,7 @@ mysqli_close($conn);
                       <img src="<?php echo $dados['user_photo']; ?>" alt=""><?php echo $dados['user_name']; ?>
                     </a><i class="fa-solid fa-ellipsis-vertical config-geral user-course-manager" data-toggle="modal" data-target="#modalGerenciarAtribuidos"></i>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                      <a class="dropdown-item"  href="../logout/logout.php"><i class="fa fa-sign-out pull-right"></i> Sair</a>
                     </div>
                   </li>
   
@@ -449,7 +449,7 @@ mysqli_close($conn);
                     <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="../../images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -461,7 +461,7 @@ mysqli_close($conn);
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="../../images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -473,7 +473,7 @@ mysqli_close($conn);
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="../../images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -485,7 +485,7 @@ mysqli_close($conn);
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="../../images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -616,7 +616,7 @@ mysqli_close($conn);
             <div class="modal-content">
             <div class="modal-header">
               <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-              <img src="images/users/foto_marcelo.jpg" alt="">Marcelo Neri
+              <img src="../../images/users/foto_marcelo.jpg" alt="">Marcelo Neri
             </a>
                 <h5 class="modal-title" id="modalGerenciarAtribuidosLabel">OPERAÇÕES COM TRILHAS E VÍDEOS</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -918,7 +918,7 @@ mysqli_close($conn);
             <div class="modal-content">
             <div class="modal-header">
               <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-              <img src="images/users/foto_marcelo.jpg" alt=""><span>Marcelo Neri</span>
+              <img src="../../images/users/foto_marcelo.jpg" alt=""><span>Marcelo Neri</span>
             </a>
                 <h5 class="modal-title" style="display: none;" id="modalGerenciarAtribuidosLabel"><span class="modal-user-photo user-profile"></span><span class="modal-user-name"></span></h5>
                 <!--<h5 class="modal-title" id="exampleModalLabel"></h5>-->
@@ -1029,20 +1029,20 @@ mysqli_close($conn);
     
 
     <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../../../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-   <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="../../../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>   
+    <script src="../../../vendors/nprogress/nprogress.js"></script>   
     <!-- mask input -->
-    <script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="../../../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
     
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
-    <script src="js/dashboard/script_dashboard.js"></script>
-    <script src="js/cadastro/script_cadastro_de_trilha.js"></script>
-    <script src="js/cadastro/script_cadastro_de_videos.js"></script>
+    <script src="../../build/js/custom.min.js"></script>
+    <script src="../../js/dashboard/script_dashboard.js"></script>
+    <script src="../../js/cadastro/script_cadastro_de_trilha.js"></script>
+    <script src="../../js/cadastro/script_cadastro_de_videos.js"></script>
   </body>
 </html>

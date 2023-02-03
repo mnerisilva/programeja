@@ -320,7 +320,7 @@
     /////////// VÍDEOS DA PLATAFORMA - LISTAGEM GERAL //////////////////////////////////////////
     $.ajax({
         type: "POST",
-        url: "php/backend/lista.php",
+        url: "../backend/lista.php",
         dataType: "json",
         encode: true,
     }).done(function (data) {
@@ -445,7 +445,7 @@ function listaVideosDaTrilha(){
                     };
                     $.ajax({
                         type: "POST",
-                        url: "php/backend/lista_videos_da_trilha.php",
+                        url: "../backend/lista_videos_da_trilha.php",
                         data: formData,
                         dataType: "json",
                         encode: true,
@@ -492,7 +492,7 @@ function povoaSelectDoFiltrarTrilhas(){ // chamado quando a aplicação inicia
                     $.ajax({
                         // inicio do código ajax listagem inicial - lista users
                         type: "POST",
-                        url: "php/backend/lista_trilhas.php",
+                        url: "../backend/lista_trilhas.php",
                         dataType: "json",
                         encode: true,
                     }).done(function (data) {
@@ -529,7 +529,7 @@ function povoaSelectDaCategoriaDoCadastrarTrilhas(){ // chamado quando a aplica�
                     $.ajax({
                         // inicio do código ajax listagem inicial - lista users
                         type: "POST",
-                        url: "php/backend/lista_categoria.php",
+                        url: "../backend/lista_categoria.php",
                         dataType: "json",
                         encode: true,
                     }).done(function (data) {
@@ -565,7 +565,7 @@ function povoaSelectDaCategoriaDoCadastrarVideo(){ // chamado quando a aplicaç�
                     $.ajax({
                         // inicio do código ajax listagem inicial - lista users
                         type: "POST",
-                        url: "php/backend/lista_categoria.php",
+                        url: "../backend/lista_categoria.php",
                         dataType: "json",
                         encode: true,
                     }).done(function (data) {
@@ -912,7 +912,7 @@ function listaTabelaDaDireita ( _idDaTrilhaEscolhida ) {
                 };
                 $.ajax({
                     type: "POST",
-                    url: "php/backend/lista_videos_da_trilha.php",
+                    url: "../backend/lista_videos_da_trilha.php",
                     data: formData,
                     dataType: "json",
                     encode: true,
@@ -1217,7 +1217,7 @@ function listaTrilhasDoUser(user_id){
                     //console.log(formData.user_id);
                     $.ajax({
                         type: "POST",
-                        url: "php/backend/lista_trilhas_do_user.php",
+                        url: "../backend/lista_trilhas_do_user.php",
                         data: formData,
                         dataType: "json",
                         encode: true,
@@ -1424,7 +1424,7 @@ function loopingDeMontagemAjaxListaTrilhasDisponiveisUserManage(nodeList){
 function listaTrilhasDisponiveisUserManager(){  
                     $.ajax({
                         type: "POST",
-                        url: "php/backend/lista_trilhas.php",
+                        url: "../backend/lista_trilhas.php",
                         dataType: "json",
                         encode: true,
                     }).done(function (data) {
@@ -1617,7 +1617,7 @@ function verificaSeUserPodeSerExcluido(user_id) {
 function listaGeralDeUsuarios(){
     $.ajax({
         type: "POST",
-        url: "php/backend/lista_users.php",
+        url: "../backend/lista_users.php",
         dataType: "json",
         encode: true,
     }).done(function (data) {        
@@ -1685,7 +1685,7 @@ function listaGeralDeUsuarios(){
                 };    
                 $.ajax({
                     type: "POST",
-                    url: "php/backend/pega_user.php",
+                    url: "../backend/pega_user.php",
                     data: formData,
                     dataType: "json",
                     encode: true,
@@ -1754,7 +1754,7 @@ function pegaDadosUsuarioEspecifico(user_id) {
                 };    
                 $.ajax({
                     type: "POST",
-                    url: "php/backend/pega_user.php",
+                    url: "../backend/pega_user.php",
                     data: formData,
                     dataType: "json",
                     encode: true,
@@ -1800,7 +1800,7 @@ function pegaDadosUsuarioEspecifico(user_id) {
 function pega() { 
                 $.ajax({
                     type: "POST",
-                    url: "php/backend/monta_json_menu_categia_trilhas_videos.php",
+                    url: "../backend/monta_json_menu_categia_trilhas_videos.php",
                     dataType: "json",
                     encode: true,
                 }).done(function (data) { 

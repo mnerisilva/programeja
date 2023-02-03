@@ -51,9 +51,9 @@ if(isset($_POST['btn-entrar'])){
             $_SESSION['saudacao'] = 'Bem-vinda,';
           }
         if($_SESSION['user_access_type'] == 1){
-				  header('Location: dashboard_admin.php');
+				  header('Location: php/dashboard/dashboard_admin.php');
         }elseif($_SESSION['user_access_type'] == 2){
-				  header('Location: plataforma.php');
+				  header('Location: php/plataforma/plataforma.php');
         }
       } else {
 				$erros[] = "<li> Usuário e senha não conferem </li>";
@@ -108,7 +108,7 @@ endif;
     
     <!-- Style -->
     <link rel="stylesheet" href="login/css/style.css">
-    <link href="index.css" rel="stylesheet">
+    <link href="js/index.css" rel="stylesheet">
 
     <title>|| Gestão de trilhas de estudo</title><link
       rel="stylesheet"
@@ -410,7 +410,7 @@ endif;
     <script src="login/js/popper.min.js"></script>
     <script src="login/js/bootstrap.min.js"></script>
     <script src="login/js/main.js"></script>
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 
 

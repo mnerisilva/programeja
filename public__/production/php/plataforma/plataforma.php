@@ -1,6 +1,6 @@
 <?php
 // Conexão
-require_once 'PHP/backend/connect.php';
+require_once '../backend/connect.php';
 
 // Sessão
 session_start();
@@ -32,36 +32,36 @@ mysqli_close($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     
-  <link href="images/favicon.ico" rel="shortcut icon" />
+  <link href="../../images/favicon.ico" rel="shortcut icon" />
 
     <title> GEsTri</title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="../../../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="../../../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 
-    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
+    <link href="../../ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
     
-    <script src="js/prism.js"></script>
+    <script src="../../js/prism.js"></script>
 
-    <link href="css/prism.css" rel="stylesheet">
+    <link href="../../css/prism.css" rel="stylesheet">
 
     
 
     <!-- Custom Theme Style -->
     <!--<link href="../build/css/custom.min.css" rel="stylesheet">-->
-    <link href="../build/css/custom_.css" rel="stylesheet">
+    <link href="../../../build/css/custom_.css" rel="stylesheet">
     <!--<link href="css/custom.css" rel="stylesheet">-->
-    <link href="css/plataforma/custom_plataforma.css" rel="stylesheet">
+    <link href="../../css/plataforma/custom_plataforma.css" rel="stylesheet">
 
     <!-- TinyMCE -->    
-    <script src="tinymce/tinymce.min.js"></script>
+    <script src="../../tinymce/tinymce.min.js"></script>
   </head>
 
   <body class="nav-md">
@@ -210,7 +210,7 @@ mysqli_close($conn);
             <!-- menu profile quick info -->
             <div class="profile clearfix esconde_profile">
               <div class="profile_pic">
-                <!--<img src="images/img.jpg" alt="..." class="img-circle profile_img">-->
+                <!--<img src="../../images/img.jpg" alt="..." class="img-circle profile_img">-->
                 <img src="<?php echo $dados['user_photo']; ?>" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
@@ -303,7 +303,7 @@ mysqli_close($conn);
 
 
 
-                      <a class="dropdown-item"  href="logout.php"><i class="fa fa-sign-out pull-right"></i> Sair</a>
+                      <a class="dropdown-item"  href="../logout/logout.php"><i class="fa fa-sign-out pull-right"></i> Sair</a>
                     </div>
                     <div>
 
@@ -460,7 +460,7 @@ mysqli_close($conn);
                     <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="../../images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -472,7 +472,7 @@ mysqli_close($conn);
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="../../images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -484,7 +484,7 @@ mysqli_close($conn);
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="../../images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -496,7 +496,7 @@ mysqli_close($conn);
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="../../images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -852,31 +852,31 @@ mysqli_close($conn);
     
 
     <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../../../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-   <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="../../../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
+    <script src="../../../vendors/nprogress/nprogress.js"></script>
     <!-- iCheck -->
-    <script src="../vendors/iCheck/icheck.min.js"></script>   
+    <script src="../../../vendors/iCheck/icheck.min.js"></script>   
     <!-- mask input -->
-    <script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="../../../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
     
-    <script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-    <script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-    <script src="../vendors/google-code-prettify/src/prettify.js"></script>
+    <script src="../../../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="../../../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="../../../vendors/google-code-prettify/src/prettify.js"></script>
 
 
     <!-- Include the Ckeditor 4 -->
-    <script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
-    <script src="ckeditor/ckeditor.js"></script>
+    <script src="../../ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+    <script src="../../ckeditor/ckeditor.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <!--<script src="../build/js/custom.min.js"></script>-->
-    <script src="../build/js/custom.js"></script>
-    <script src="script_plataforma.js"></script>
+    <!--<script src="../../build/js/custom.min.js"></script>-->
+    <script src="../../build/js/custom.js"></script>
+    <script src="../../js/plataforma/script_plataforma.js"></script>
 
 
       <script>   

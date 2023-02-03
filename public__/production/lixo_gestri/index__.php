@@ -39,7 +39,7 @@ if(isset($_POST['btn-entrar'])):
 				mysqli_close($conn);
 				$_SESSION['logado'] = true;
 				$_SESSION['id_usuario'] = $dados['id'];
-				header('Location: dashboard_admin.php');
+				header('Location: php/dashboard/dashboard_admin.php');
 			else:
 				$erros[] = "<li> Usuário e senha não conferem </li>";
 			endif;

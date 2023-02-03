@@ -435,7 +435,7 @@
         console.log(formData);
         $.ajax({
             type: "POST",
-            url: "php/backend/salva_post.php",
+            url: "../backend/salva_post.php",
             data: formData,
             dataType: "json",
             encode: true,
@@ -544,7 +544,7 @@
             };        
             $.ajax({
                 type: "POST",
-                url: "php/backend/salva_snippet.php",
+                url: "../backend/salva_snippet.php",
                 data: formData,
                 dataType: "json",
                 encode: true,
@@ -625,7 +625,7 @@
         };        
         $.ajax({
             type: "POST",
-            url: "php/backend/salva_snippet.php",
+            url: "../backend/salva_snippet.php",
             data: formData,
             dataType: "json",
             encode: true,
@@ -674,7 +674,7 @@
         };        
         $.ajax({
             type: "POST",
-            url: "php/backend/salva_post_no_snippet_clicado.php",
+            url: "../backend/salva_post_no_snippet_clicado.php",
             data: formData,
             dataType: "json",
             encode: true,
@@ -822,7 +822,7 @@ $(_carregaConteudoForm).submit(function(event) {
                     }
                     $.ajax({
                         type: "POST",
-                        url: "php/backend/monta_json_menu_categia_trilhas_videos.php",
+                        url: "../backend/monta_json_menu_categia_trilhas_videos.php",
                         data: formData,
                         dataType: "json",
                         encode: true
@@ -1062,7 +1062,7 @@ function montaMenuTrilhaVideosDinamicamente() {
                 }
                 $.ajax({
                     type: "POST",
-                    url: "php/backend/monta_json_menu_categia_trilhas_videos.php",
+                    url: "../backend/monta_json_menu_categia_trilhas_videos.php",
                     dataType: "json",
                     encode: true
                 }).done(function (data) {
@@ -1333,7 +1333,7 @@ function listaPostsPorConteudo(id_conteudo) { // lista POSTs do vídeo escolhido
                 };    
                 $.ajax({
                     type: "POST",
-                    url: "php/backend/lista_posts_por_conteudo.php",
+                    url: "../backend/lista_posts_por_conteudo.php",
                     data: formData,
                     dataType: "json",
                     encode: true
@@ -1444,7 +1444,7 @@ function ultimoPostInserido(idDoUltimoPostInserido) { // lista POSTs do vídeo e
                 };    
                 $.ajax({
                     type: "POST",
-                    url: "php/backend/lista_ultimo_post_inserido.php",
+                    url: "../backend/lista_ultimo_post_inserido.php",
                     data: formData,
                     dataType: "json",
                     encode: true
@@ -1534,7 +1534,7 @@ function excluiPost(post_id){
         };    
         $.ajax({
             type: "POST",
-            url: "php/backend/exclui_post.php",
+            url: "../backend/exclui_post.php",
             data: formData,
             dataType: "json",
             encode: true,
@@ -1560,7 +1560,7 @@ function povoaSelectDaCategoriaDoSnippet(){ // chamado quando a aplicação inic
     $.ajax({
         // inicio do código ajax listagem inicial - lista users
         type: "POST",
-        url: "php/backend/lista_categoria.php",
+        url: "../backend/lista_categoria.php",
         dataType: "json",
         encode: true,
     }).done(function (data) {
@@ -1593,7 +1593,7 @@ function povoaSelectDaCategoriaDoSnippetAdd(){ // chamado quando a aplicação i
     $.ajax({
         // inicio do código ajax listagem inicial - lista users
         type: "POST",
-        url: "php/backend/lista_categoria.php",
+        url: "../backend/lista_categoria.php",
         dataType: "json",
         encode: true,
     }).done(function (data) {
@@ -1640,7 +1640,7 @@ function listaSnippetsNaDivCenterHome(){
                 console.log('entrei dentro de listaPostsNaDivCenterHome');
                 $.ajax({
                     type: "POST",
-                    url: "php/backend/lista_snippets_da_center_home.php",
+                    url: "../backend/lista_snippets_da_center_home.php",
                     dataType: "json",
                     encode: true,
                 }).done(function (data) { 
@@ -1762,7 +1762,7 @@ function listaSnippetsNaDivCenterHome(){
                             };    
                             $.ajax({
                                 type: "POST",
-                                url: "php/backend/lista_posts_do_snippet.php",
+                                url: "../backend/lista_posts_do_snippet.php",
                                 data: formData,
                                 dataType: "json",
                                 encode: true
@@ -1794,7 +1794,7 @@ function listaPostsPorSnippet(id_conteudo) { // lista POSTs do vídeo escolhido 
     };    
     $.ajax({
         type: "POST",
-        url: "php/backend/lista_posts_por_conteudo.php",
+        url: "../backend/lista_posts_por_conteudo.php",
         data: formData,
         dataType: "json",
         encode: true
