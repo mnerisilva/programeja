@@ -34,7 +34,8 @@
 
     ///// IMPORTANTE: problema com fullscreen do tinyMCE tá relacionado a seu container: container-editor (class), está com position: fixed //////
 
-    $(document).ready(function(){
+    //$(document).ready(function(){
+    document.addEventListener("DOMContentLoaded", function(){
         setTimeout(function(){
             console.log('Logo da TinyMCE: '+document.querySelector('#form-salva-post .tox-statusbar__branding svg'));
         },10000);

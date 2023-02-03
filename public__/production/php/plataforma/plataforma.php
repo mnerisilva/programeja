@@ -7,7 +7,7 @@ session_start();
 
 // Verificação
 if(!isset($_SESSION['logado'])):
-	header('Location: index.php');
+	//header('Location: index.php');
 endif;
 
 // Dados
@@ -852,7 +852,8 @@ mysqli_close($conn);
     
 
     <!-- jQuery -->
-    <script src="../../../vendors/jquery/dist/jquery.min.js"></script>
+    <!--<script src="../../../vendors/jquery/dist/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
    <script src="../../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
@@ -880,7 +881,8 @@ mysqli_close($conn);
 
 
       <script>   
-        $(document).ready(function(){
+        //$(document).ready(function(){
+        document.addEventListener("DOMContentLoaded", function(){
 
             /*CKEDITOR.replace('editor1', {
                   extraPlugins: 'editorplaceholder',
@@ -900,7 +902,7 @@ mysqli_close($conn);
                   removeButtons: 'PasteFromWord'
             });                
           // resolve conflito CKeditor4 e modal Bootstrap 4
-          $.fn.modal.Constructor.prototype._enforceFocus = function(){};             
+          //$.fn.modal.Constructor.prototype._enforceFocus = function(){};             
         });
 
              
