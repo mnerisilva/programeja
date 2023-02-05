@@ -1,14 +1,14 @@
 <?php    
-    $servername = "localhost";
+    /*$servername = "localhost";
     $database = "apren941_programeja";
     $username = "apren941_programeja";
-    $password = "@fduH@4MWC_K";
+    $password = "@fduH@4MWC_K";*/
 
        
-    /*$servername = "localhost";
+    $servername = "localhost";
     $database = "programeja";
     $username = "root";
-    $password = "";*/
+    $password = "";
 
 
     // Create connection

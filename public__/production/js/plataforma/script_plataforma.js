@@ -1145,6 +1145,8 @@ _innerHtml = _innerHtml +                  `<li style="position: relative;">
                                 e.preventDefault();
                                 e.stopPropagation();
                                 //e.target.style.height = 50+'px';
+                                let _chevronDown = e.target.querySelector('.fa-chevron-down');
+                                _chevronDown.style.transform = 'rotate(-90geg)';
                                 removeActive(_trilhaLinksMenu);
                                 console.log(item);
                                 item.querySelector('a').classList.add('active');
