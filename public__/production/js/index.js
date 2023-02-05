@@ -66,7 +66,7 @@ _registreSeClose.addEventListener('click', function(){
     console.log('clicou no registre-se-close');
     limpaCamposFormRegistro();
     _alertUserExist.style.opacity = 0;
-    _containerRegistreSe.style.left = -2000;    
+    _containerRegistreSe.style.left = -2000+'px';    
 });
 
 _registrouseComSucessoClose.addEventListener('click', function(){
@@ -74,14 +74,14 @@ _registrouseComSucessoClose.addEventListener('click', function(){
     limpaCamposFormRegistro();
     _alertUserExist.style.opacity = 0;
     _containerRegistreSe.style.left = -2000;   
-    _containerRegistreSeComSucesso.style.left = -2000;    
+    _containerRegistreSeComSucesso.style.left = -2000+'px';    
 });
 
 _btnCancelarRegistro.addEventListener('click', function(){
     console.log('clicou no registre-se-close');
     limpaCamposFormRegistro();
     _alertUserExist.style.opacity = 0;
-    _containerRegistreSe.style.left = -2000;    
+    _containerRegistreSe.style.left = -2000+'px';    
 });
 
 _esqueciASenha.addEventListener('click', function(){
@@ -93,7 +93,7 @@ _esqueciASenha.addEventListener('click', function(){
 
 _esqueceuASenhaClose.addEventListener('click', function(){
     console.log('clicou no registre-se-close');
-    _containerEsqueceuASenha.style.left = -2000;    
+    _containerEsqueceuASenha.style.left = -2000+'px';    
 });
 
 

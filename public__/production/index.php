@@ -66,25 +66,25 @@ if(isset($_POST['btn-entrar'])){
 	endif;
 
 //endif;
-} elseif(isset($_POST['btn-cadastrar'])){    
+}/* elseif(isset($_POST['btn-cadastrar'])){    
     header('Location: php/registro.php');
-}
+}*/
 ?>
 
-<html>
+<!--<html>
 <head>
   <link href="images/favicon.ico" rel="shortcut icon" />
 	<title> GEsTri</title>
 	<meta charset="utf-8">
 </head>
-<body>
+<body>-->
 
 <?php 
-if(!empty($erros)):
-	foreach($erros as $erro):
-		echo $erro;
-	endforeach;
-endif;
+//if(!empty($erros)):
+//	foreach($erros as $erro):
+///		echo $erro;
+///	endforeach;
+//endif;
 ?>
 
 
