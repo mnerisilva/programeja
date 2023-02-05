@@ -108,7 +108,7 @@ endif;
     
     <!-- Style -->
     <link rel="stylesheet" href="login/css/style.css">
-    <link href="js/index.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 
     <title>|| Gestão de trilhas de estudo</title><link
       rel="stylesheet"
