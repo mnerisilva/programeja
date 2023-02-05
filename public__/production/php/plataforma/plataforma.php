@@ -37,14 +37,14 @@ mysqli_close($conn);
     <title> GEsTri</title>
 
     <!-- Bootstrap -->
-    <link href="../../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- NProgress -->
-    <link href="../../../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="../../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="../../../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="../../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 
     <link href="../../ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
     
@@ -56,7 +56,7 @@ mysqli_close($conn);
 
     <!-- Custom Theme Style -->
     <!--<link href="../build/css/custom.min.css" rel="stylesheet">-->
-    <link href="../../../build/css/custom_.css" rel="stylesheet">
+    <link href="../../build/css/custom_.css" rel="stylesheet">
     <!--<link href="css/custom.css" rel="stylesheet">-->
     <link href="../../css/plataforma/custom_plataforma.css" rel="stylesheet">
 
@@ -852,22 +852,22 @@ mysqli_close($conn);
     
 
     <!-- jQuery -->
-    <!--<script src="../../../vendors/jquery/dist/jquery.min.js"></script>-->
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="../../vendors/jquery/dist/jquery.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>-->
     <!-- Bootstrap -->
-   <script src="../../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
-    <script src="../../../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="../../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../../../vendors/nprogress/nprogress.js"></script>
+    <script src="../../vendors/nprogress/nprogress.js"></script>
     <!-- iCheck -->
-    <script src="../../../vendors/iCheck/icheck.min.js"></script>   
+    <script src="../../vendors/iCheck/icheck.min.js"></script>   
     <!-- mask input -->
-    <script src="../../../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="../../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
     
-    <script src="../../../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-    <script src="../../../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-    <script src="../../../vendors/google-code-prettify/src/prettify.js"></script>
+    <script src="../../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="../../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="../../vendors/google-code-prettify/src/prettify.js"></script>
 
 
     <!-- Include the Ckeditor 4 -->
