@@ -1417,6 +1417,7 @@ function listaPostsPorConteudo(id_conteudo) { // lista POSTs do vídeo escolhido
                     _editPost.forEach(function(editPostIcon){
                         editPostIcon.addEventListener('click', function(e){
                             console.log(`Clicou no edit do post: ${e.target.dataset.post_id_edit}`);
+                            e.target.parentNode.classList.add('post-tools-color-change');
                             _postEditContext = e.target.parentNode.parentNode.parentNode;
                             _postEditContextTitle = _postEditContext.querySelector('.post-title h5');
                             _postEditContextContent = _postEditContext.querySelector('.post-content').innerHTML;
