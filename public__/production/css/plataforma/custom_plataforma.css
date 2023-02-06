@@ -1275,3 +1275,7 @@ pre[class*=language-] {
     margin: .5em 0;
     overflow: auto;
 }
+
+.post-tools-color-change {
+    color: #c1bebe !important
+}
