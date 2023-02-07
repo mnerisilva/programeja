@@ -577,6 +577,7 @@ mysqli_close($conn);
                                 <th><i class="fa-solid fa-plus-minus"></i>&nbsp;&nbsp;atribuir trilha</th>
                                 <th><i class="fa-solid fa-eye"></i>&nbsp;&nbsp;exibe dados</th>
                                 <th><i class="fa-solid fa-minus"></i>&nbsp;&nbsp;excluir</th>
+                                <th></i>&nbsp;&nbsp;qtd trilhas</th>
                               </tr>
                             </thead>
                             <tbody></tbody>

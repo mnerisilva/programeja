@@ -1632,6 +1632,7 @@ function listaGeralDeUsuarios(){
             const _td5 = document.createElement('td');
             const _td6 = document.createElement('td');
             const _td7 = document.createElement('td');
+            const _td8 = document.createElement('td');
             const _nodeText1 = document.createTextNode(userItem.user_id);
             const _nodeText2 = document.createTextNode(userItem.user_name);
             _td1.innerHTML = `<img src="${userItem.user_photo}" class="user-avatar" />`;
@@ -1648,6 +1649,7 @@ function listaGeralDeUsuarios(){
             _tr.appendChild(_td5);
             _tr.appendChild(_td6);
             _tr.appendChild(_td7);
+            _tr.appendChild(_td8);
             _tbody.appendChild(_tr);
         }
 
