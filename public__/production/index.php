@@ -409,7 +409,9 @@ if(isset($_POST['btn-entrar'])){
     <script src="login/js/jquery-3.3.1.min.js"></script>
     <script src="login/js/popper.min.js"></script>
     <script src="login/js/bootstrap.min.js"></script>
-    <script src="login/js/main.js"></script>
+    <script src="login/js/main.js"></script> 
+    <!-- mask input -->
+    <script src="vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 

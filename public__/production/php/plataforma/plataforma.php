@@ -868,7 +868,10 @@ mysqli_close($conn);
     
     <script src="../../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
     <script src="../../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-    <script src="../../vendors/google-code-prettify/src/prettify.js"></script>
+    <script src="../../vendors/google-code-prettify/src/prettify.js"></script>  
+
+    <!-- mask input -->
+    <script src="../../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
 
 
     <!-- Include the Ckeditor 4 -->
