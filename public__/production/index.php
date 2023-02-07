@@ -306,7 +306,7 @@ if(isset($_POST['btn-entrar'])){
                         <div class="form-group row">
                           <label class="control-label col-md-1 col-sm-1 ">Cpf</label>
                           <div class="col-md-4 col-sm-4 ">
-                            <input type="text" class="form-control" id="reg_cpf" required="" name="reg_cpf" data-inputmask="'mask': '999.999.999-99'">
+                          <input type="text" class="form-control" id="reg_cpf" required="" name="reg_cpf" data-inputmask="'mask': '999.999.999-99'">
                           </div>
                         </div>
                         <div class="ln_solid"></div>
