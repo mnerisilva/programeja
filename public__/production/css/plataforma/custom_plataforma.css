@@ -1277,5 +1277,32 @@ pre[class*=language-] {
 }
 
 .post-tools-color-change {
-    color: #c1bebe !important
+    color: #c1bebe !important;
+    pointer-events: none !important;
+    cursor: default !important;
+}
+
+.edit-post:hover {
+    transition: color .1s;
+    color: #958e8e;
+}
+
+.trash-post:hover {
+    transition: color .1s;
+    color: #958e8e;
+}
+
+
+.mask {
+    background-color: #a54c4c8f;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 99999999999;
+    border: solid 5px #000;
+    color: blue;
+}
+
+.mask-hidden {
+    display: none !important;
 }

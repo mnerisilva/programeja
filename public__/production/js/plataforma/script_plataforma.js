@@ -38,13 +38,16 @@
     document.addEventListener("DOMContentLoaded", function(){
         setTimeout(function(){
             console.log('Logo da TinyMCE: '+document.querySelector('#form-salva-post .tox-statusbar__branding svg'));
-        },10000);
+        },10000);        
+        const _mask = document.querySelector('.mask');
+        _mask.classList.add('mask-hidden');
     })
 
 
     const _leftCol = document.querySelector('.left_col');
     const _rightCol = document.querySelector('.right_col');
     const _topNav = document.querySelector('.top_nav');
+
 
     const _listaVideosGeral = document.querySelector(".lista-videos-geral tbody");
     const _listaVideosAtribuidos = document.querySelector(".lista-videos-atribuidos tbody");
@@ -468,6 +471,7 @@
                 Prism.highlightAll();
                 _postEditContext.style.height = 'auto';
                 _post.style.height = 'auto';
+                ativaEditDeletePosts();
             }
         });
     });
@@ -476,6 +480,7 @@
     // Botão "cancelar" form-salva-post
     _btnSalvaPostCancelar.addEventListener('click', function(){ 
         limpaEditor();
+        ativaEditDeletePosts();
     });
 
 
@@ -1417,7 +1422,8 @@ function listaPostsPorConteudo(id_conteudo) { // lista POSTs do vídeo escolhido
                     _editPost.forEach(function(editPostIcon){
                         editPostIcon.addEventListener('click', function(e){
                             console.log(`Clicou no edit do post: ${e.target.dataset.post_id_edit}`);
-                            e.target.parentNode.classList.add('post-tools-color-change');
+                            //e.target.parentNode.classList.add('post-tools-color-change');
+                            desativaEditDeletePosts();
                             _postEditContext = e.target.parentNode.parentNode.parentNode;
                             _postEditContextTitle = _postEditContext.querySelector('.post-title h5');
                             _postEditContextContent = _postEditContext.querySelector('.post-content').innerHTML;
@@ -1918,4 +1924,21 @@ function limpaEditor(){
     let _operation = document.querySelector('#operation');
     _operation.value = 'save';
 
+}
+
+
+function desativaEditDeletePosts(){
+    let elements = document.querySelectorAll('.lista-de-posts .post .post-header .post-tools > i');
+    elements.forEach(function(item){
+        item.classList.add('post-tools-color-change');
+    });
+    _mask.classList.remove('mask-hidden');
+}
+
+function ativaEditDeletePosts(){
+    let elements = document.querySelectorAll('.lista-de-posts .post .post-header .post-tools > i');
+    elements.forEach(function(item){
+        item.classList.remove('post-tools-color-change');
+    });
+    _mask.classList.add('mask-hidden');
 }

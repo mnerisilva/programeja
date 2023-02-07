@@ -7,7 +7,7 @@ session_start();
 
 // Verificação
 if(!isset($_SESSION['logado'])):
-	//header('Location: index.php');
+	header('Location: index.php');
 endif;
 
 // Dados
@@ -200,6 +200,7 @@ mysqli_close($conn);
 
 
         <div class="col-md-3 left_col esconde-left_col">
+          <div class="mask"></div>
           <div class="left_col scroll-view" id="left_col">
             <div class="navbar nav_title" style="border: 0;">
               <a href="index.html" class="site_title"><i class="fa-solid fa-code"></i>&nbsp;&nbsp;&nbsp;<span>GE</span><span>s</span><span>Tri</span> <i class="fa-solid fa-clone"></i> <span style="font-size: .7em;">ProGrameJá!!!</span></a>
