@@ -5,7 +5,7 @@ include('connect.php');
 
 
 		
-		$sql = "SELECT trilha.trilha_id, trilha.trilha_name, trilha.trilha_type_id, trilha.trilha_descricao, trilha.trilha_nomeamigavel, trilha.id_categoria, trilha.trilha_status_id, categoria.id_categoria, categoria.abrev_categoria, trilha_tipo.trilha_type_id, trilha_tipo.trilha_type_name, trilha_status.trilha_status_id, trilha_status.trilha_status_name FROM trilha, categoria, trilha_tipo, trilha_status WHERE trilha.id_categoria = categoria.id_categoria AND trilha.trilha_type_id = trilha_tipo.trilha_type_id AND trilha.trilha_status_id = trilha_status.trilha_status_id";
+		$sql = "SELECT trilha.trilha_id, trilha.trilha_name, trilha.trilha_type_id, trilha.trilha_descricao, trilha.trilha_nomeamigavel, trilha.id_categoria, trilha.trilha_status_id, categoria.id_categoria, categoria.abrev_categoria, trilha_tipo.trilha_type_id, trilha_tipo.trilha_type_name, trilha_status.trilha_status_id, trilha_status.trilha_status_name FROM trilha, categoria, trilha_tipo, trilha_status WHERE trilha.id_categoria = categoria.id_categoria AND trilha.trilha_type_id = trilha_tipo.trilha_type_id AND trilha.trilha_status_id = trilha_status.trilha_status_id ORDER BY trilha.trilha_name";
 		$result = mysqli_query($conn, $sql);
 		
 
