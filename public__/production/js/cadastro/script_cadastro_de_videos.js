@@ -52,7 +52,7 @@ _copy.addEventListener("click", function () {
     };
     $.ajax({
       type: "POST",
-      url: "php/backend/recebe.php",
+      url: "../../php/backend/recebe.php",
       data: formData,
       dataType: "json",
       encode: true,
