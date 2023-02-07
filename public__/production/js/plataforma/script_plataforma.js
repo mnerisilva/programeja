@@ -39,8 +39,8 @@
         setTimeout(function(){
             console.log('Logo da TinyMCE: '+document.querySelector('#form-salva-post .tox-statusbar__branding svg'));
         },10000);        
-        const _mask = document.querySelector('.mask');
-        _mask.classList.add('mask-hidden');
+        let _mask = document.querySelector('.mask-left-col');
+        _mask.classList.remove('mask-show');
     })
 
 
@@ -1931,14 +1931,16 @@ function desativaEditDeletePosts(){
     let elements = document.querySelectorAll('.lista-de-posts .post .post-header .post-tools > i');
     elements.forEach(function(item){
         item.classList.add('post-tools-color-change');
-    });
-    _mask.classList.remove('mask-hidden');
+    });    
+    let _mask = document.querySelector('.mask-left-col');
+    _mask.classList.add('mask-show');
 }
 
 function ativaEditDeletePosts(){
     let elements = document.querySelectorAll('.lista-de-posts .post .post-header .post-tools > i');
     elements.forEach(function(item){
         item.classList.remove('post-tools-color-change');
-    });
-    _mask.classList.add('mask-hidden');
+    });    
+    let _mask = document.querySelector('.mask-left-col');
+    _mask.classList.remove('mask-show');
 }
