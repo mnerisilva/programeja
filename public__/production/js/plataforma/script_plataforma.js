@@ -57,7 +57,19 @@
                 console.log('É FIREFOX');
                 _leftColId.classList.add('overflow-auto');
             } else {
-                console.log('NÃO É');                
+                console.log('NÃO É FIREFOX');                
+            }
+
+            // Detect Internet Explorer
+            let IExplorerAgent = false;
+            IExplorerAgent = userAgentString.indexOf("MSIE") > -1 || userAgentString.indexOf("rv:") > -1;
+
+                      
+            if(IExplorerAgent){
+                console.log('É INTERNET EXPLORER');
+                return;
+            } else {
+                console.log('NÃO É INTERNET EXPLORER');                
             }
 
 
