@@ -256,7 +256,7 @@ mysqli_close($conn);
               <a class="linke" data-toggle="tooltip" data-placement="top" title="Testar código">
                 <span class="" aria-hidden="true"><i class="fa-solid fa-flask-vial botao-testar"></i></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="logout.php">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="../logout/logout.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>

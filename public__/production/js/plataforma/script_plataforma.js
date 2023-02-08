@@ -858,7 +858,7 @@ $(_carregaConteudoForm).submit(function(event) {
                                 <hr />`
                                 }
                                 contador = contador = 1;
-    _innerHtml = _innerHtml +` <h3><span class="badge badge-secondary">${item.abrev_categoria}</span> <span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>`+
+    _innerHtml = _innerHtml +` <h3><span class="badge badge-secondary">${item.abrev_categoria}</span> <span> <i class="fa fa-arrow-turn-down"></i><small>trilhas</small></span></h3>`+
                                 `<div class="menu_section">
                                     <ul class="nav side-menu">
                                         <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2 trilha-titulo"> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>` +
@@ -1096,7 +1096,7 @@ function montaMenuTrilhaVideosDinamicamente() {
                             </div>`
                             }
                             contador = contador = 1;
-_innerHtml = _innerHtml +` <h3><span class="badge badge-secondary">${item.abrev_categoria}</span> <span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>`+
+_innerHtml = _innerHtml +` <h3><span class="badge badge-secondary">${item.abrev_categoria}</span> <span> <i class="fa fa-arrow-turn-down"></i><small>trilhas</small></span></h3>`+
                             `<div class="menu_section">
                                 <ul class="nav side-menu">
                                     <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2"> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>` +
