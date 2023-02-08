@@ -387,6 +387,7 @@ table.lista-user td, .table th {
     color: #333 !important;
     background-color: #6c757d !important;
     background-color: rgb(247, 247, 247) !important;
+    font-weight: 400;
 }
 
 .nav.side-menu>li>a .fa-chevron-down {
@@ -554,12 +555,12 @@ table.lista-user td, .table th {
 
 
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-button {
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-thumb {
   background: #e1e1e1;
@@ -1324,4 +1325,17 @@ pre[class*=language-] {
 
 #sidebar-menu .wrapper-sidebar-menu .nav.side-menu > li > a {
     margin-bottom: 2px !important;
+}
+
+.footer-title {
+    color: #723182 !important;
+}
+
+.trilha-link-menu .fa-chevron-down {
+    transition: transform .2s;
+    transform: rotate(-90deg) !important;
+}
+
+.nav.side-menu > li > a, .nav.child_menu > li > a {
+    font-weight: 400;
 }

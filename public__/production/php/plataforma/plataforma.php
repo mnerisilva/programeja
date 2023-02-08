@@ -7,7 +7,7 @@ session_start();
 
 // Verificação
 if(!isset($_SESSION['logado'])):
-	header('Location: index.php');
+	header('Location: ../../index.php');
 endif;
 
 // Dados
@@ -585,7 +585,8 @@ mysqli_close($conn);
               <div class="col-md-12 col-sm-12">  
                   <!--Add content to the page home ...-->
                         <div class="row row-general-posts">
-                          <div class="col-md-12 tools mb-2">Ferramenta, busca, botões adicionar snippet</div>
+                          <!--<div class="col-md-12 tools mb-2">Ferramenta, busca, botões adicionar snippet</div>-->
+                          <div class="col-md-12 tools mb-2 footer-title">GEsTri - Gestão de Trilhas de Estudos</div>
                           <div class="col-md-1 left-home mt-2">
                                         <!--<button type="button" class="dashboard-load">Dashboard</button>-->
 
