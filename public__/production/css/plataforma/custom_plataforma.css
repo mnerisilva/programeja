@@ -1381,3 +1381,15 @@ pre[class*=language-] {
     -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1) !important;*/
     text-shadow: 0 0.1em 0px rgb(0 0 0), 0.05em -0.03em 0 rgb(0 0 0), 0.05em 0.005em 0 rgb(0 0 0), 0em 0.08em 0 rgb(0 0 0), 0.05em 0.08em 0 rgb(0 0 0), 0px -0.03em 0 rgb(0 0 0), -0.03em -0.03em 0 rgb(0 0 0), -0.03em 0.08em 0 rgb(0 0 0), -0.03em 0 0 rgb(0 0 0) !important;
 }
+
+.nav-md ul.nav.child_menu li:before {
+    left: 32px;
+}
+
+.nav-md ul.nav.child_menu li:after {
+    left: 36px;
+}
+
+.nav.side-menu > li > a, .nav.child_menu > li > a {
+    border-left: solid thin !important;
+}
