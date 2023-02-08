@@ -660,7 +660,8 @@ table.lista-user td, .table th {
     overflow: hidden;  /* Hide the element content, while height = 0 */
     max-height: 0;
     opacity: 0;
-    transition: max-height .7s 0ms, opacity 400ms 0ms;
+    /*transition: max-height .7s 0ms, opacity 400ms 0ms;*/
+    transition: max-height .4s 0ms, opacity 400ms 0ms;
 }
 
 .mostra {
