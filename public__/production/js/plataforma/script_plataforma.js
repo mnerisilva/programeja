@@ -864,7 +864,7 @@ $(_carregaConteudoForm).submit(function(event) {
     _innerHtml = _innerHtml +` <h3><span class="badge badge-secondary">${item.abrev_categoria}</span> <span> <i class="fa fa-arrow-turn-down"></i><small>trilhas</small></span></h3>`+
                                 `<div class="menu_section">
                                     <ul class="nav side-menu">
-                                        <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2 trilha-titulo"> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>` +
+                                        <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2 trilha-titulo"> ${item.trilha_name} </span><span class="fa fa-chevron-right"></span></a>` +
                                             `<ul class="nav child_menu">` +
                                                 `<li style="position: relative;">
                                                     <a href="" data-id_conteudo="${item.id_conteudo}" data-trilha_id=${item.trilha_id} data-conteudo_codigoyoutube="${item.conteudo_codigoyoutube}" data-conteudo_descricao="${item.conteudo_descricao}">${item.conteudo_descricao}</a>
@@ -880,7 +880,7 @@ $(_carregaConteudoForm).submit(function(event) {
                                 </div>` +
                                 `<div class="menu_section">
                                     <ul class="nav side-menu">
-                                        <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2 trilha-titulo"> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>` +
+                                        <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2 trilha-titulo"> ${item.trilha_name} </span><span class="fa fa-chevron-right"></span></a>` +
                                             `<ul class="nav child_menu">` +
                                                 `<li style="position: relative;">
                                                     <a href="" data-id_conteudo="${item.id_conteudo}" data-trilha_id=${item.trilha_id} data-conteudo_codigoyoutube="${item.conteudo_codigoyoutube}" data-conteudo_descricao="${item.conteudo_descricao}">${item.conteudo_descricao}</a>
@@ -914,7 +914,10 @@ $(_carregaConteudoForm).submit(function(event) {
                                 item.addEventListener('click', function(e){
                                     e.preventDefault();
                                     e.stopPropagation();
+                                    //e.target.childNodes[2].style.transform = 'rotate(0deg) !importante';
+                                    //e.target.querySelector('.fa-chevron-right').style.transform = 'rotate(0deg) !important';
                                     limpaEditor();
+                                    item.querySelector('.fa-chevron-right').classList.toggle('gira');
                                     //e.target.style.height = 50+'px';
                                     removeActive(_trilhaLinksMenu);
                                     console.log(item);
@@ -1024,7 +1027,7 @@ $(_carregaConteudoForm).submit(function(event) {
                                     string = string + `<h3><span class="badge badge-secondary">${item.abrev_categoria}</span> <span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>`;
                                     string = string + `<div class="menu_section">`;
                                     string = string + `<ul class="nav side-menu">`;
-                                    string = string + `<li><a><i class="fa-solid fa-list-ul"></i><span> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>`;    
+                                    string = string + `<li><a><i class="fa-solid fa-list-ul"></i><span> ${item.trilha_name} </span><span class="fa fa-chevron-right"></span></a>`;    
                                     string = string + `<ul class="nav child_menu">`; 
                                     string = string + `<li><a href="">${item.conteudo_descricao}</a></li>`;  
                                 arrxxCat.push(item.abrev_categoria);
@@ -1034,7 +1037,7 @@ $(_carregaConteudoForm).submit(function(event) {
                                     string = string + `</li>`;
                                     string = string + `<div class="menu_section">`;
                                     string = string + `<ul class="nav side-menu">`;
-                                    string = string + `<li><a><i class="fa-solid fa-list-ul"></i><span> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>`;    
+                                    string = string + `<li><a><i class="fa-solid fa-list-ul"></i><span> ${item.trilha_name} </span><span class="fa fa-chevron-right"></span></a>`;    
                                     string = string + `<ul class="nav child_menu">`; 
                                     string = string + `<li><a href="">${item.conteudo_descricao}</a></li>`;  
                                     arrxxTri.push(item.trilha_name); 
@@ -1102,7 +1105,7 @@ function montaMenuTrilhaVideosDinamicamente() {
 _innerHtml = _innerHtml +` <h3><span class="badge badge-secondary">${item.abrev_categoria}</span> <span> <i class="fa fa-arrow-turn-down"></i><small>trilhas</small></span></h3>`+
                             `<div class="menu_section">
                                 <ul class="nav side-menu">
-                                    <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2"> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>` +
+                                    <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2"> ${item.trilha_name} </span><span class="fa fa-chevron-right"></span></a>` +
                                         `<ul class="nav child_menu">` +
                                             `<li style="position: relative;">
                                                 <a href="" data-id_conteudo="${item.id_conteudo}" data-trilha_id=${item.trilha_id} data-conteudo_codigoyoutube="${item.conteudo_codigoyoutube}" data-conteudo_descricao="${item.conteudo_descricao}">${item.conteudo_descricao}</a>
@@ -1118,7 +1121,7 @@ _innerHtml = _innerHtml +` <h3><span class="badge badge-secondary">${item.abrev_
                             </div>` +
                             `<div class="menu_section">
                                 <ul class="nav side-menu">
-                                    <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2"> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>` +
+                                    <li class="trilha-link-menu"><a><i class="fa-solid fa-list-ul"></i><span class="pl-2"> ${item.trilha_name} </span><span class="fa fa-chevron-right"></span></a>` +
                                         `<ul class="nav child_menu">` +
                                             `<li style="position: relative;">
                                                 <a href="" data-id_conteudo="${item.id_conteudo}" data-trilha_id=${item.trilha_id} data-conteudo_codigoyoutube="${item.conteudo_codigoyoutube}" data-conteudo_descricao="${item.conteudo_descricao}">${item.conteudo_descricao}</a>
@@ -1153,8 +1156,8 @@ _innerHtml = _innerHtml +                  `<li style="position: relative;">
                                 e.preventDefault();
                                 e.stopPropagation();
                                 //e.target.style.height = 50+'px';
-                                let _chevronDown = e.target.querySelector('.fa-chevron-down');
-                                _chevronDown.style.transform = 'rotate(-90geg)';
+                                let _chevronRight = e.target.querySelector('.fa-chevron-right');
+                                _chevronRight.style.transform = 'rotate(-90geg)';
                                 removeActive(_trilhaLinksMenu);
                                 console.log(item);
                                 item.querySelector('a').classList.add('active');
@@ -1261,7 +1264,7 @@ _innerHtml = _innerHtml +                  `<li style="position: relative;">
                                 string = string + `<h3><span class="badge badge-secondary">${item.abrev_categoria}</span> <span> <i class="fa fa-arrow-down"></i><small>trilhas</small></span></h3>`;
                                 string = string + `<div class="menu_section">`;
                                 string = string + `<ul class="nav side-menu">`;
-                                string = string + `<li><a><i class="fa-solid fa-list-ul"></i><span> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>`;    
+                                string = string + `<li><a><i class="fa-solid fa-list-ul"></i><span> ${item.trilha_name} </span><span class="fa fa-chevron-right"></span></a>`;    
                                 string = string + `<ul class="nav child_menu">`; 
                                 string = string + `<li><a href="">${item.conteudo_descricao}</a></li>`;  
                             arrxxCat.push(item.abrev_categoria);
@@ -1271,7 +1274,7 @@ _innerHtml = _innerHtml +                  `<li style="position: relative;">
                                 string = string + `</li>`;
                                 string = string + `<div class="menu_section">`;
                                 string = string + `<ul class="nav side-menu">`;
-                                string = string + `<li><a><i class="fa-solid fa-list-ul"></i><span> ${item.trilha_name} </span><span class="fa fa-chevron-down"></span></a>`;    
+                                string = string + `<li><a><i class="fa-solid fa-list-ul"></i><span> ${item.trilha_name} </span><span class="fa fa-chevron-right"></span></a>`;    
                                 string = string + `<ul class="nav child_menu">`; 
                                 string = string + `<li><a href="">${item.conteudo_descricao}</a></li>`;  
                                 arrxxTri.push(item.trilha_name); 

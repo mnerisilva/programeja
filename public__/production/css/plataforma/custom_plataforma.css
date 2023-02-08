@@ -367,7 +367,8 @@ table.lista-user td, .table th {
 
 .wrapper-sidebar-menu .badge.badge-secondary {
     background-color: #6c757d9e !important;
-    background-color: #dddddd9e !important
+    background-color: #dddddd9e !important;
+    background-color: #fff !important;
 }
 
 .wrapper-sidebar-menu small {
@@ -415,7 +416,7 @@ table.lista-user td, .table th {
 
 .left_col {
     height: 95vh !important;
-    overflow: auto !important;
+    overflow: overlay !important;
 }
 
 .profile {
@@ -1331,11 +1332,19 @@ pre[class*=language-] {
     color: #723182 !important;
 }
 
-.trilha-link-menu .fa-chevron-down {
+.trilha-link-menu .fa-chevron-right {
     transition: transform .2s;
-    transform: rotate(-90deg) !important;
 }
 
 .nav.side-menu > li > a, .nav.child_menu > li > a {
     font-weight: 400;
+}
+
+.gira {
+    transition: transform .2s;
+    transform: rotate(90deg) !important;
+}
+
+.main_menu span.fa {
+    color: initial;
 }
