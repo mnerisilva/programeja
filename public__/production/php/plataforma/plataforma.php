@@ -199,7 +199,7 @@ mysqli_close($conn);
 
 
 
-        <div class="col-md-3 left_col esconde-left_col">
+        <div class="col-md-3 left_col esconde-left_col left-column">
           <div class="mask-left-col"></div>
           <div class="left_col scroll-view" id="left_col">
             <div class="navbar nav_title" style="border: 0;">

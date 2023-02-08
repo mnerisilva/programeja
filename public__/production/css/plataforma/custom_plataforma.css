@@ -555,7 +555,7 @@ table.lista-user td, .table th {
 
 
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
@@ -587,7 +587,31 @@ table.lista-user td, .table th {
 }
 ::-webkit-scrollbar-corner {
   background: transparent;
-}
+}*/
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bfb9b9; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #797878; 
+  }
+
 
 
 
@@ -1338,6 +1362,7 @@ pre[class*=language-] {
 
 .nav.side-menu > li > a, .nav.child_menu > li > a {
     font-weight: 400;
+    border-bottom: solid thin #efeff3;
 }
 
 .gira {
@@ -1347,4 +1372,8 @@ pre[class*=language-] {
 
 .main_menu span.fa {
     color: initial;
+}
+
+.overflow-auto {
+    overflow: auto !important;
 }

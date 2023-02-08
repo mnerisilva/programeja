@@ -1,4 +1,6 @@
 
+
+
      // TinyMCE
      tinymce.init({
         selector: '#editor1',
@@ -41,6 +43,28 @@
         },10000);        
         let _mask = document.querySelector('.mask-left-col');
         _mask.classList.remove('mask-show');
+
+        const _leftColId = document.querySelector('.left-column');
+
+            // Get the user-agent string
+            let userAgentString = navigator.userAgent;
+ 
+            // Detect Firefox
+            let firefoxAgent = false;
+            firefoxAgent = userAgentString.indexOf("Firefox") > -1;
+          
+            if(firefoxAgent){
+                console.log('É FIREFOX');
+                _leftColId.classList.add('overflow-auto');
+            } else {
+                console.log('NÃO É');                
+            }
+
+
+
+
+
+
     })
 
 
