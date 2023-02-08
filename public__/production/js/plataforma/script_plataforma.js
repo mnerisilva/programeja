@@ -48,6 +48,9 @@
     const _rightCol = document.querySelector('.right_col');
     const _topNav = document.querySelector('.top_nav');
 
+    const _sidebarFooter = document.querySelector('.sidebar-footer');
+    _sidebarFooter.style.display = 'none';
+
 
     const _listaVideosGeral = document.querySelector(".lista-videos-geral tbody");
     const _listaVideosAtribuidos = document.querySelector(".lista-videos-atribuidos tbody");
