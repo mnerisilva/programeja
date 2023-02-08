@@ -1393,3 +1393,8 @@ pre[class*=language-] {
 .nav.side-menu > li > a, .nav.child_menu > li > a {
     border-left: solid thin !important;
 }
+
+.nav-md ul.nav.child_menu {
+    margin-right: 1em !important;
+    margin-left: .4em !important;
+}
