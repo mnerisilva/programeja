@@ -381,8 +381,8 @@ table.lista-user td, .table th {
 .nav.side-menu>li>a { /* alterei o menu --- criei esta regra */
     color: #fff !important;
     color: #333 !important;
-    background-color: #6c757d !important;
-    background-color: rgb(247, 247, 247) !important;
+    /*background-color: #6c757d !important;
+    background-color: rgb(247, 247, 247) !important;*/
     font-weight: 400;
 }
 
@@ -438,9 +438,9 @@ table.lista-user td, .table th {
 }
 
 .nav.child_menu li {
-    background-color: antiquewhite;
-    background-color: floralwhite;
-    background-color: ghostwhite;
+    /*background-color: antiquewhite;*/
+    /*background-color: floralwhite;*/
+    /*background-color: ghostwhite;*/
 }
 
 .menu_section h3 {
@@ -474,7 +474,7 @@ table.lista-user td, .table th {
 }
 
 .menu_section>ul {
-    border-bottom: solid thin #dedede78;
+    /*border-bottom: solid thin #dedede78;*/
 }
 
 
@@ -513,7 +513,8 @@ table.lista-user td, .table th {
 
 
 .img-circle.profile_img {
-    width: 5vw;
+    /*width: 5vw;*/
+    width: 3vw;
 }
 
 
@@ -719,6 +720,8 @@ table.lista-user td, .table th {
     color: #fff !important;
     background-color: #2A3F54;
     background-color: dimgrey;
+    background-color: #dedede;
+    background-color: #dedede4f;
 }
 
 
@@ -1342,6 +1345,7 @@ pre[class*=language-] {
 
 .menu_section > ul {
     margin-top: 0 !important;
+    margin-left: 1em;
 }
 
 #sidebar-menu .wrapper-sidebar-menu .nav.side-menu > li > a {
@@ -1358,7 +1362,7 @@ pre[class*=language-] {
 
 .nav.side-menu > li > a, .nav.child_menu > li > a {
     font-weight: 400;
-    border-bottom: solid thin #efeff3;
+    /*border-bottom: solid thin #efeff3;*/
 }
 
 .gira {
@@ -1391,10 +1395,14 @@ pre[class*=language-] {
 }
 
 .nav.side-menu > li > a, .nav.child_menu > li > a {
-    border-left: solid thin !important;
+    /*border-left: solid thin !important;*/
 }
 
 .nav-md ul.nav.child_menu {
     margin-right: 1em !important;
-    margin-left: .4em !important;
+    margin-left: 3.4em !important;
+}
+
+.trilha-link-menu .fa-folder-tree {
+    color: #666;
 }
