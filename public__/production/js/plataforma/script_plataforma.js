@@ -1406,7 +1406,11 @@ function listaPostsPorConteudo(id_conteudo) { // lista POSTs do vídeo escolhido
                         <div class="post mb-4 p-4">
                             <div class="post-header">
                                 <span class="post-date">
-                                    <h3>${`<i class="fa-solid fa-calendar-days"></i>&nbsp;<span>${_dia}/${_mes}/${_ano}</span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-clock"></i>&nbsp;<span class="hora">${_postHour}</span>`}</h3>
+                                    <h3>
+                                    ${`<i class="fa-solid fa-calendar-days"></i>&nbsp;<span>${_dia}/${_mes}/${_ano}</span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa-solid fa-clock"></i>&nbsp;<span class="hora">${_postHour}</span> `}
+                                    </h3>
                                 </span>
                                 <span class="post-tools">
                                     <i class="fa-solid fa-pencil edit-post" data-post_id_edit="${post.post_id}"></i>
@@ -1418,7 +1422,9 @@ function listaPostsPorConteudo(id_conteudo) { // lista POSTs do vídeo escolhido
                                 <h5>${post.post_title}</h5>
                             </div>
                             <div class="post-content">${post.post}</div>
-                            <div class="post-footer"></div>
+                            <div class="post-footer">
+                            ${`<small><i class="fa-solid fa-hashtag"></i><span>${post.post_id}</span></small>`}
+                            </div>
                         </div>
                         `;  
                         $(_divListaDePosts).prepend(str);               

@@ -542,7 +542,8 @@ mysqli_close($conn);
                                       <h3>New Sign ups</h3>
                                       <p>Lorem ipsum psdea itgum rixt.</p>
                                     </div>
-                                </div>
+                                </div>                                
+                                <h2 class="front-page-title">Por que todos deveriam aprender a programar?</h2>
                                 <div class="embed-responsive embed-responsive-16by9 embed-video-youtube mb-4">
                                     <!--<iframe allow="autoplay;" allowfullscreen="" class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/mHW1Hsqlp6A?enablejsapi=1&version=3&rel=0&amp;autoplay=1&amp;start=0" autoplay="1" allowfullscreen=""></iframe>-->
                                     <iframe id="video-abertura" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/mHW1Hsqlp6A?enablejsapi=1&version=3&rel=0&amp;autoplay=1&amp;start=0" autoplay="1" allowfullscreen=""></iframe>

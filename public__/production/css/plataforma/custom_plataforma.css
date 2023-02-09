@@ -941,7 +941,7 @@ transition: all .3s linear;
 .update-notification {
     color: #ddd;
     position: absolute;
-    right: 0;
+    right: .8em;
     margin-top: -2em;
     padding: .2em;
 }
@@ -1355,6 +1355,7 @@ pre[class*=language-] {
 
 .footer-title {
     color: #723182 !important;
+    background-color: aliceblue;
 }
 
 .trilha-link-menu .fa-chevron-right {
@@ -1406,4 +1407,15 @@ pre[class*=language-] {
 
 .trilha-link-menu .fa-folder-tree {
     color: #666;
+}
+
+.front-page-title {
+    font-size: 2.8em !important;
+    text-align: center;
+}
+
+.post-footer {
+    text-align: right !important;
+    font-style: italic;
+    color: #e4e4e4;
 }
