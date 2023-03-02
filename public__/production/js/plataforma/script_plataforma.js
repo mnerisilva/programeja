@@ -72,10 +72,9 @@
                 console.log('NÃO É INTERNET EXPLORER');                
             }
 
+            
 
-
-
-
+        const _userIdLogado = document.querySelector('.span-plataforma-user-id');
 
     })
 
@@ -372,7 +371,7 @@
         console.log(_snippetDaListaASerExcluido);
         let _btnSnippetListedLink = document.querySelectorAll('.snippet-listed-link');
         console.log(_btnSnippetListedLink);
-        _btnSnippetListedLink[_snippetDaListaASerExcluido].style.opacity = 0;
+        //                                                            _btnSnippetListedLink[_snippetDaListaASerExcluido].style.opacity = 0;
         //_btnSnippetListedLink[_snippetDaListaASerExcluido].style.opacity = 0;
         $(_btnSnippetListedLink[_snippetDaListaASerExcluido]).fadeOut( "slow" );
         excluiPost(parseInt(_postAExcluir));
@@ -1378,8 +1377,10 @@ function removeAtivo(el){
 
 
 function listaPostsPorConteudo(id_conteudo) { // lista POSTs do vídeo escolhido no menu lateral (dentro da trilha, é claro) - visão MINHAS TRILHAS. DO ALUNO
+                console.log(_userIdLogado);
                 var formData = {
-                    id_conteudo : id_conteudo
+                    id_conteudo : id_conteudo,
+                    user_id : _userIdLogado.textContent
                 };    
                 $.ajax({
                     type: "POST",
